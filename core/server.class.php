@@ -44,16 +44,23 @@ class ServerInstance
 	public function step()
 	{
 		$data = $this->_IRC->read();
+		
 		foreach($data as $command)
 		{
+			if(Ponybot::$verbose >= 2)
+				echo '['.Server::getName().'] '.$command."\n";
 			$command = $this->_IRC->parseMsg($command);
 			$this->_main->plugins->callEvent('server', strtolower($command['command']), $command);
 			
 			if(in_array($command['command'], array('PRIVMSG', 'NOTICE')))
 			{
 				$message = explode(' ', $command['message']);
-				if($message[0] == '!')
-					$this->_main->plugins->callEvent('command', substr($message[0], 1), $command);
+				if($message[0][0] == '!')
+				{
+					$cmdName = substr(array_shift($message), 1);
+					Ponybot::message('Command catched: !$0', array($cmdName), E_DEBUG);
+					$this->_main->plugins->callEvent('command', $cmdName, $message);
+				}
 			}
 		}
 		$this->_IRC->processBuffer();

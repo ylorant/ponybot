@@ -18,6 +18,10 @@ class Ponybot
 		$this->config = new Config('conf');
 		$this->config->load();
 		
+		//Setting verbosity
+		if($this->config->getConfig('General.Verbosity') !== NULL)
+			Ponybot::$verbose = $this->config->getConfig('General.Verbosity');
+		
 		$this->plugins = new Plugins($this);
 		$this->plugins->loadPlugins(explode(',',$this->config->getConfig('General.Plugins')));
 		

@@ -7,15 +7,23 @@ class PluginIRCBase extends Plugin
 			IRC::joinChannel($command['channel']);
 	}
 	
-	public function Server376($command)
+	public function Server372($command)
 	{
 		$channels = $this->_main->config->getConfig('Servers.'.Server::getName().'.Channels');
-		IRC::joinChannels(explode(',',$channels));
+		IRC::joinChannels($channels);
 	}
 	
 	public function ServerPing($command)
 	{
 		IRC::send('PONG :'.$command['additionnal']);
+	}
+	
+	public function CommandSay($parameters)
+	{
+		Ponybot::message('Say command triggered');
+		$to = array_shift($parameters);
+		$message = join(' ', $parameters);
+		IRC::message($to, $message);
 	}
 }
 

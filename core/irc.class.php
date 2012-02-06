@@ -32,10 +32,11 @@ class IRCConnection
 		$data = fgets($this->_socket);
 		if(substr($data, -2) == "\r\n")
 		{
-			echo $this->_data.$data;
 			$commands = explode("\r\n", $this->_data.$data);
 			if(empty($commands[count($commands)-1]))
 				array_pop($commands);
+			
+			$this->_data = "";
 			
 			return $commands;
 		}
@@ -47,7 +48,11 @@ class IRCConnection
 	
 	public function joinChannels($channels)
 	{
-		$this->send('JOIN '.join(',', $channels));
+		if(is_array($channels))
+			$channels = join(',', $channels);
+		
+		str_replace(' ', '', $channels);
+		$this->send('JOIN '.$channels);
 	}
 	
 	public function joinChannel($chan)
@@ -59,6 +64,16 @@ class IRCConnection
 	{
 		$this->send('NICK '.$nick);
 		$this->send('USER '.$user.' '.$user.' '.$user.' '.$user);
+	}
+	
+	public function message($to, $message)
+	{
+		$this->send('PRIVMSG '.$to.' :'.$message);
+	}
+	
+	public function notice($to, $message)
+	{
+		$this->send('NOTICE '.$to.' :'.$message);
 	}
 	
 	public function waitPing()
@@ -100,7 +115,6 @@ class IRCConnection
 				if($this->_lastCommand + substr($time, 5) <= time())
 				{
 					fputs($this->_socket, $data."\r\n");
-					echo $data."\r\n";
 					unset($this->_buffer[$time]);
 					$this->_lastTimed = time();
 				}
@@ -108,7 +122,6 @@ class IRCConnection
 			elseif($this->_lastSend + 2 <= time() || !$this->_floodLimit)
 			{
 				fputs($this->_socket, $data."\r\n");
-				echo $data."\r\n";
 				unset($this->_buffer[$time]);
 			}
 		}
@@ -140,6 +153,8 @@ class IRCConnection
 			$channel = $cmd[2];
 		if(isset($cmd[3]))
 			$additionnal_parameters = explode(' ', $cmd[3]);
+		else
+			$additionnal_parameters = array();
 		$return = array('nick' => $nick, 'user' => $user, 'command' => $command, 'channel' => $channel, 'additionnal' => $additionnal_parameters, 'message' => $msg, 'raw' => $raw);
 		return $return;
 	}

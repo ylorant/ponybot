@@ -221,7 +221,7 @@ class Plugins extends Events
 		}
 		
 		//Load dependencies if necessary
-		if(isset($params['dependencies']) && is_array($params['dependencies']))
+		if(!empty($params['dependencies']) && is_array($params['dependencies']))
 		{
 			Ponybot::message('Loading plugin dependencies for $0.', array($params['name'])	);
 			$ret = $this->loadPlugins($params['dependencies']);
@@ -232,7 +232,7 @@ class Plugins extends Events
 			}
 			Ponybot::message('Loaded plugin dependencies for $0.', array($params['name']));
 		}
-		elseif(isset($params['dependencies']))
+		elseif(!empty($params['dependencies']))
 			Ponybot::message('Dependencies list is not an array.', array(), E_WARNING);
 		
 		//Init of plugin data array, and plugin instanciation
@@ -250,7 +250,7 @@ class Plugins extends Events
 		{
 			Ponybot::message('Using automatic events recognition...');
 			$methods = get_class_methods($params['className']); //Get all class methods for plugin
-		
+			
 			//Analyse all class methods
 			foreach($methods as $method)
 			{
@@ -258,7 +258,11 @@ class Plugins extends Events
 				foreach($this->_autoMethods as $listener => $prefix)
 				{
 					if(preg_match('#^'.$prefix.'#', $method))
-						$this->addEvent($listener, $params['className'], strtolower(preg_replace('#'.$prefix.'(.+)#', '$1', $method)), array($this->_plugins[$params['name']]['obj'], $method));
+					{
+						$event = strtolower(preg_replace('#'.$prefix.'(.+)#', '$1', $method));
+						Ponybot::message('Binding method $0::$1 on event $2/$3', array($params['className'], $method, $listener, $event), E_DEBUG);
+						$this->addEvent($listener, $params['className'], $event, array($this->_plugins[$params['name']]['obj'], $method));
+					}
 				}
 			}
 		}

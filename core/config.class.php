@@ -194,7 +194,12 @@ class Config
 			$section = explode('.', $section);
 			$sec = &$this->config;
 			foreach($section as $s)
+			{
+				if(!isset($sec[$s]))
+					return NULL;
+				
 				$sec = &$sec[$s];
+			}
 			
 			return $sec;
 		}
