@@ -76,6 +76,11 @@ class IRCConnection
 		$this->send('NOTICE '.$to.' :'.$message);
 	}
 	
+	public function kick($from, $who, $reason = '')
+	{
+		$this->send('KICK '.$from.' '.$who' :'.$reason);
+	}
+	
 	public function waitPing()
 	{
 		$continue = true;
