@@ -15,6 +15,7 @@ class IRCConnection
 	{
 		$this->_socket = fsockopen($addr, $port);
 		stream_set_blocking($this->_socket, false);
+		$this->_lastSend = 0;
 	}
 	
 	public function setFloodLimit($value)
@@ -128,6 +129,7 @@ class IRCConnection
 			{
 				fputs($this->_socket, $data."\r\n");
 				unset($this->_buffer[$time]);
+				$this->_lastSend = time();
 			}
 		}
 	}

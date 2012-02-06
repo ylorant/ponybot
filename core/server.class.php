@@ -55,7 +55,7 @@ class ServerInstance
 			if(in_array($command['command'], array('PRIVMSG', 'NOTICE')))
 			{
 				$message = explode(' ', $command['message']);
-				if($message[0][0] == '!')
+				if(strlen($message[0]) && $message[0][0] == '!')
 				{
 					$cmdName = substr(array_shift($message), 1);
 					Ponybot::message('Command catched: !$0', array($cmdName), E_DEBUG);

@@ -7,7 +7,7 @@ class PluginIRCBase extends Plugin
 			IRC::joinChannel($command['channel']);
 	}
 	
-	public function Server372($command)
+	public function Server376($command)
 	{
 		$channels = $this->_main->config->getConfig('Servers.'.Server::getName().'.Channels');
 		IRC::joinChannels($channels);
