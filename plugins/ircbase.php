@@ -25,6 +25,11 @@ class PluginIRCBase extends Plugin
 		$message = join(' ', $parameters);
 		IRC::message($to, $message);
 	}
+	
+	public function CommandAction($param, $args)
+	{
+		IRC::action($param["channel"], join(' ', $args));
+	}
 }
 
 $this->addPluginData(array(

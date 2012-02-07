@@ -82,6 +82,11 @@ class IRCConnection
 		$this->send('KICK '.$from.' '.$who.' :'.$reason);
 	}
 	
+	public function action($channel, $message)
+	{
+		$this->send("PRIVMSG $channel :ACTION $message");
+	}
+	
 	public function waitPing()
 	{
 		$continue = true;
