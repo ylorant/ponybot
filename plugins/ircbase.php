@@ -18,11 +18,11 @@ class PluginIRCBase extends Plugin
 		IRC::send('PONG :'.$command['additionnal']);
 	}
 	
-	public function CommandSay($parameters)
+	public function CommandSay($parameters, $args)
 	{
 		Ponybot::message('Say command triggered');
-		$to = array_shift($parameters);
-		$message = join(' ', $parameters);
+		$to = array_shift($args);
+		$message = join(' ', $args);
 		IRC::message($to, $message);
 	}
 	
