@@ -24,6 +24,8 @@ class Plugins extends Events
 		$this->addEventListener('command', 'Command');
 		$this->addEventListener('server', 'Server');
 		$this->addEventListener('routines', 'Routine');
+		
+		$coreEvents = new CoreEvents($this, $main);
 	}
 	
 	/** Loads plugins from an array.

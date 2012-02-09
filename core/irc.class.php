@@ -87,6 +87,79 @@ class IRCConnection
 		$this->send("PRIVMSG $channel :ACTION $message");
 	}
 	
+	public function getChannelUsers($channel)
+	{
+		if(!isset($this->_users[$channel]))
+		{
+			$this->send("NAMES $channel");
+			$cmd = array();
+			do
+			{
+				do
+				{
+					$data = $this->read();
+					$this->processBuffer();
+ 				} while(!$data);
+
+				foreach($data as $msg)
+				{
+					$cmd = $this->parseMsg($msg);
+					Ponybot::$instance->plugins->callEvent('server', strtolower($cmd['command']));
+				}
+			} while($cmd['command'] != 366);
+		}
+		
+		return array_keys($this->_users[$channel]);
+	}
+	
+	public function getChannelRights($channel)
+	{
+		if(!isset($this->_users[$channel]))
+			$this->getChannelUsers($channel);
+		
+		$return = array('users' => array(), 'voice' => array(), 'operator' => array());
+		foreach($this->_users[$channel] as $user => $level)
+		{
+			switch($level)
+			{
+				case 'u':
+					$return['users'][] = $user;
+					break;
+				case 'v':
+					$return['voice'][] = $user;
+					break;
+				case 'o':
+					$return['operator'][] = $user;
+					break;
+			}
+		}
+		
+		return $return;
+	}
+	
+	public function setChannelUsers($channel, $users)
+	{
+		$list = array();
+		print_r($users);
+		foreach($users as $user)
+		{
+			$nick = substr($user, 1);
+			switch($user[0])
+			{
+				case '@':
+					$list[$nick] = 'o';
+					break;
+				case '+':
+					$list[$nick] = 'v';
+					break;
+				default:
+					$list[$user] = 'u';
+			}
+		}
+		
+		$this->_users[$channel] = $list;
+	}
+	
 	public function waitPing()
 	{
 		$continue = true;
@@ -149,7 +222,7 @@ class IRCConnection
 		$message = '';
 		if(isset($command[2]))
 			$message = $command[2];
-		$cmd = explode(' ', $command[1]);
+		$cmd = explode(' ', $command[1], 4);
 		$user = explode('!', $cmd[0]);
 		if(isset($user[1]))
 		{

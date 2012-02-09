@@ -6,10 +6,12 @@ class Ponybot
 	public $servers;
 	private static $_lastError;
 	public static $verbose;
+	public static $instance;
 	public $plugins;
 	
 	public function init()
 	{
+		Ponybot::$instance = $this;
 		Ponybot::$verbose = 1;
 		Ponybot::message('Starting ponybot...');
 		
@@ -80,6 +82,8 @@ class Ponybot
 		}
 		
 		//Parsing message vars
+		if(!is_array($args))
+			$args = array($args);
 		foreach($args as $id => $value)
 			$message = str_replace('$'.$id, $value, $message);
 		
