@@ -137,10 +137,43 @@ class IRCConnection
 		return $return;
 	}
 	
+	public function chanUserMode($channel, $user, $mode)
+	{
+		$this->send('MODE '.$channel.' '.$mode.' '.$user);
+	}
+	
+	public function giveVoice($channel = 'all', $user)
+	{
+		if($channel == 'all')
+		{
+			foreach($this->_channels as $chan)
+			{
+				if(in_array($user, $this->getChannelUsers($chan)))
+					$this->send('MODE '.$chan.' +v '.$user);
+			}
+		}
+		else
+			$this->send('MODE '.$channel.' +v '.$user);
+	}
+	
+	public function takeVoice($channel = 'all', $user)
+	{
+		$this->send('MODE '.$channel.' -v '.$user);
+	}
+	
+	public function giveOp($channel = 'all', $user)
+	{
+		$this->send('MODE '.$channel.' +o '.$user);
+	}
+	
+	public function takeOp($channel = 'all', $user)
+	{
+		$this->send('MODE '.$channel.' -o '.$user);
+	}
+	
 	public function setChannelUsers($channel, $users)
 	{
 		$list = array();
-		print_r($users);
 		foreach($users as $user)
 		{
 			$nick = substr($user, 1);
@@ -180,6 +213,24 @@ class IRCConnection
 			usleep(5000);
 		}
 		Ponybot::message("Got pong.");
+	}
+	
+	public function userRightUpdate($channel, $user, $level)
+	{
+		if(in_array($user, $this->getChannelUsers($channel)) && in_array($level, array('u', 'v', 'o')))
+			$this->_users[$channel][$user] = $level;
+	}
+	
+	public function userJoin($channel, $user)
+	{
+		if(!in_array($user, $this->getChannelUsers($channel)))
+			$this->_users[$channel][$user] = 'u';
+	}
+	
+	public function userPart($channel, $user)
+	{
+		if(in_array($user, $this->getChannelUsers($channel)))
+			unset($this->_users[$channel][$user]);
 	}
 	
 	public function send($data, $time = FALSE)

@@ -37,6 +37,26 @@ class CoreEvents
 		IRC::send('PONG :'.$command['additionnal']);
 	}
 	
+	public function ServerJoin($command)
+	{
+		IRC::userJoin($command['channel'], $command['nick']);
+	}
+	
+	public function ServerPart($command)
+	{
+		IRC::userPart($command['channel'], $command['nick']);
+	}
+	
+	public function ServerMode($command)
+	{
+		print_r($command);
+		if(preg_match('/(\+|-).*(v|o)/', $command['additionnal'][0], $matches) && isset($command['additionnal'][1]))
+		{
+			echo "\nMatch !";
+			IRC::userRightUpdate($channel, $command['additionnal'][1], $matches[2]);
+		}
+	}
+	
 	public function ServerNamesReply($command)
 	{
 		if(!isset($this->_names[$command['additionnal'][1]]))
