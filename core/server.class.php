@@ -10,7 +10,6 @@ class ServerInstance
 	{
 		$this->_main = $main;
 		$this->_IRC = new IRCConnection();
-		
 	}
 	
 	public function load($config)
@@ -23,7 +22,9 @@ class ServerInstance
 		if(!isset($config['Ping']) || Ponybot::parseBool($config['Ping']))
 			$this->_IRC->waitPing();
 		usleep(5000);
-		$this->_IRC->setFloodLimit(true);
+		
+		if(isset($config['FloodLimit']) && Ponybot::parseRBool($config['FloodLimit']))
+			$this->_IRC->setFloodLimit($config['FloodLimit']);
 	}
 	
 	public function getName()

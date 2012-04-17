@@ -8,6 +8,7 @@ class Ponybot
 	public static $verbose;
 	public static $instance;
 	public $plugins;
+	public $initialized;
 	
 	public function init()
 	{
@@ -16,6 +17,8 @@ class Ponybot
 		Ponybot::message('Starting ponybot...');
 		
 		ServerList::setMain($this);
+		
+		$this->initialized = false;
 		
 		$this->config = new Config('conf');
 		$this->config->load();
@@ -33,6 +36,8 @@ class Ponybot
 		{
 			Ponybot::message('Loading server $0', array($name));
 			$this->servers[$name] = new ServerInstance($this);
+			IRC::setServer($this->servers[$name]);
+			Server::setServer($this->servers[$name]);
 			$this->servers[$name]->load($server);
 		}
 		
@@ -46,6 +51,14 @@ class Ponybot
 			return TRUE;
 		else
 			return FALSE;
+	}
+	
+	public static function parseRBool($var)
+	{
+		if(in_array(strtolower($var), array('0', 'off', 'false', 'no')))
+			return FALSE;
+		else
+			return TRUE;
 	}
 	
 	public static function message($message, $args = array(), $type = E_NOTICE)
@@ -134,6 +147,80 @@ class Ponybot
 		return NULL;
 	}
 	
+	/** Parses an INI string, with recursive sections.
+	 * This function parses a string written in the INI format, and process sections to produce a recursive array of sections, splitting levels
+	 * with the dot symbol.
+	 * 
+	 * \param $str The string to parse.
+	 * 
+	 * \return FALSE if an error occured during the parsing, else it returns the recursive array obtained from the parsing.
+	 */
+	public static function parseINIStringRecursive($str)
+	{
+		$config = array();
+		
+		//Parsing string and determining recursive array
+		$inidata = parse_ini_string($str, TRUE, INI_SCANNER_RAW);
+		if(!$inidata)
+			return FALSE;
+		foreach($inidata as $section => $content)
+		{
+			if(is_array($content))
+			{
+				$section = explode('.', $section);
+				//Getting reference on the config category pointed
+				$edit = &$config;
+				foreach($section as $el) 
+					$edit = &$edit[$el];
+				
+				$edit = $content;
+			}
+			else
+				Ponybot::message('Orphan config parameter : $0', array($section), E_WARNING);
+		}
+		
+		return $config;
+	}
+	
+	/** Generates INI config string for recursive data.
+	 * This function takes configuration array passed in parameter and generates an INI configuration string with recursive sections.
+	 * 
+	 * \param $data The data to be transformed.
+	 * \param $root The root section. Normally, this parameter is used by the function to recursively parse data by calling itself.
+	 * 
+	 * \return The INI config data.
+	 */
+	public static function generateINIStringRecursive($data, $root = "")
+	{
+		$out = "";
+		
+		if($root)
+			$out = '['.$root.']'."\n";
+		
+		$arrays = array();
+		
+		//Process data, saving sub-arrays, putting direct values in config.
+		foreach($data as $name => $value)
+		{
+			if(is_array($value) || is_object($value))
+				$arrays[$name] = $value;
+			elseif(is_bool($value))
+				$out .= $name.'='.($value ? 'yes' : 'no')."\n";
+			else
+				$out .= $name.'='.$value."\n";	
+		}
+		
+		if($out)
+			$out .= "\n";
+		
+		//Processing sub-sections
+		foreach($arrays as $name => $value)
+			$out .= Ponybot::generateINIStringRecursive($value, $root.($root ? '.' : '').$name)."\n\n";
+		
+		return trim($out);
+	}
+	
+	
 	public function run()
 	{
 		$this->_run = TRUE;
@@ -150,7 +237,8 @@ class Ponybot
 				usleep(1000);
 			}
 			
-			$this->plugins->execRoutines();
+			if($this->initialized)
+				$this->plugins->callAllRoutines();
 		}
 		
 		foreach($this->servers as $name => $server)

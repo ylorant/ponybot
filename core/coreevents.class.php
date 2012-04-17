@@ -12,18 +12,21 @@ class CoreEvents
 		$this->_main = $main;
 		$this->_names = array();
 		
-		$events->addEvent('server', 'coreevents', '376', array($this, 'ServerMOTD'));
+		$events->addEvent('server', 'coreevents', '001', array($this, 'ServerConnected'));
 		$events->addEvent('server', 'coreevents', 'kick', array($this, 'ServerKick'));
 		$events->addEvent('server', 'coreevents', 'ping', array($this, 'ServerPing'));
 		$events->addEvent('server', 'coreevents', '353', array($this, 'ServerNamesReply'));
 		$events->addEvent('server', 'coreevents', '366', array($this, 'ServerEndOfNames'));
-		
+		$events->addEvent('server', 'coreevents', 'mode', array($this, 'ServerMode'));
+		$events->addEvent('server', 'coreevents', 'join', array($this, 'ServerJoin'));
+		$events->addEvent('server', 'coreevents', 'part', array($this, 'ServerPart'));
 	}
 	
-	public function ServerMOTD($command)
+	public function ServerConnected($command)
 	{
 		$channels = $this->_main->config->getConfig('Servers.'.Server::getName().'.Channels');
 		IRC::joinChannels($channels);
+		$this->_main->initialized = TRUE;
 	}
 	
 	public function ServerKick($command)
@@ -39,7 +42,12 @@ class CoreEvents
 	
 	public function ServerJoin($command)
 	{
-		IRC::userJoin($command['channel'], $command['nick']);
+		if($command['nick'] != $this->_main->config->getConfig('Servers.'.Server::getName().'.Nick'))
+		{
+			if($command['message'] && !$command['channel'])
+				$command['channel'] = $command['message'];
+			IRC::userJoin($command['channel'], $command['nick']);
+		}
 	}
 	
 	public function ServerPart($command)
@@ -49,11 +57,12 @@ class CoreEvents
 	
 	public function ServerMode($command)
 	{
-		print_r($command);
 		if(preg_match('/(\+|-).*(v|o)/', $command['additionnal'][0], $matches) && isset($command['additionnal'][1]))
 		{
-			echo "\nMatch !";
-			IRC::userRightUpdate($channel, $command['additionnal'][1], $matches[2]);
+			if($matches[1] == '+')
+				IRC::userModeAdd($command['channel'], $command['additionnal'][1], $matches[2]);
+			else
+				IRC::userModeRemove($command['channel'], $command['additionnal'][1], $matches[2]);
 		}
 	}
 	
@@ -64,9 +73,9 @@ class CoreEvents
 		$this->_names[$command['additionnal'][1]] = array_merge($this->_names[$command['additionnal'][1]], explode(' ', $command['message']));
 	}
 	
-	public function ServerEndOfNames($command)
+	public function ServerEndOfNames($cmd)
 	{
-		IRC::setChannelUsers($command['additionnal'][0], $this->_names[$command['additionnal'][0]]);
-		unset($this->_names[$command['additionnal'][0]]);
+		IRC::setChannelUsers($cmd['additionnal'][0], $this->_names[$cmd['additionnal'][0]]);
+		unset($this->_names[$cmd['additionnal'][0]]);
 	}
 }

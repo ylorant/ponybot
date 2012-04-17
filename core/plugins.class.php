@@ -7,6 +7,8 @@ class Plugins extends Events
 	private $_plugins; ///< Plugins list
 	private $_pluginClasses; ///< Plugin classes names
 	private $_pluginCache = array();
+	private $_routines = array();
+	private $_regex = array();
 	
 	/** Constructor for PluginManager
 	 * Initializes the class.
@@ -23,7 +25,6 @@ class Plugins extends Events
 		//Creating default event handlers
 		$this->addEventListener('command', 'Command');
 		$this->addEventListener('server', 'Server');
-		$this->addEventListener('routines', 'Routine');
 		
 		$coreEvents = new CoreEvents($this, $main);
 	}
@@ -256,6 +257,10 @@ class Plugins extends Events
 			//Analyse all class methods
 			foreach($methods as $method)
 			{
+				//Checks for routines
+				if(preg_match('#^Routine#', $method))
+					$this->addRoutine($this->_plugins[$params['name']]['obj'], $method);
+					
 				//Checks for plugin-defined events
 				foreach($this->_autoMethods as $listener => $prefix)
 				{
@@ -308,11 +313,125 @@ class Plugins extends Events
 		return array_keys($this->_plugins);
 	}
 	
-	public function execRoutines()
+	/** Adds a routine to the event manager.
+	 * This function adds a routine to the event manager, i.e. a function that will be executed every once in a while.
+	 * 
+	 * \param $plugin A reference to the plugin's class where the method is.
+	 * \param $method The name of the method to be executed.
+	 * \param $time The time interval between 2 executions of the routine. Defaults to 1 second.
+	 * 
+	 * \return TRUE if method registered correctly, FALSE otherwise.
+	 */
+	public function addRoutine(&$plugin, $method, $time = 1)
 	{
-		$routines = $this->getEvents('routines');
-		foreach($routines as $r)
-			$this->callEvent('routines', $r);
+		Ponybot::message('Adding routine $0, executed every $1s', array(get_class($plugin).'::'.$method, $time), E_DEBUG);
+		
+		if(!method_exists($plugin, $method)) //Check if method exists
+		{
+			Ponybot::message('Error : Target method does not exists.', array(), E_DEBUG);
+			return FALSE;
+		}
+		
+		$this->_routines[get_class($plugin)][$method] = array($plugin, $time, array());
+		
+		return TRUE;
+	}
+	
+	/** Deletes a routine.
+	 * This function deletes a routine from the event manager.
+	 * 
+	 * \param $plugin A reference to the plugin's class where the method is.
+	 * \param $method The name of the method to be deleted.
+	 * 
+	 * \return TRUE if method deleted correctly, FALSE otherwise.
+	 */
+	public function deleteRoutine(&$plugin, $method)
+	{
+		Ponybot::message('Deleting routine $0', array(get_class($plugin).'::'.$method), E_DEBUG);
+		
+		if(!isset($this->_routines[get_class($plugin)]))
+		{
+			Ponybot::message('Plugin $0 does not exists in routine list.', array($event), E_DEBUG);
+			return FALSE;
+		}
+		
+		if(!isset($this->_routines[get_class($plugin)][$method]))
+		{
+			Ponybot::message('Routine does not exists.', array(), E_WARNING);
+			return FALSE;
+		}
+		
+		unset($this->_routines[get_class($plugin)][$method]);
+		
+		return TRUE;
+	}
+	
+	/** This function allow the plugin to changes the time interval of one of his routines. It is useful when using automatic revent detection, because it does not
+	 * handles custom timers for routines (they are set to 1 second).
+	 * 
+	 * \param $plugin A reference to the plugin's class where the method is.
+	 * \param $method The name of the method to be updated.
+	 * \param $time The new time interval.
+	 * 
+	 * \return TRUE if method modified correctly, FALSE otherwise.
+	 */
+	public function changeRoutineTimeInterval(&$plugin, $method, $time)
+	{
+		Ponybot::message('Changing routine $0 time interval to $1s', array(get_class($plugin).'::'.$method, $time), E_DEBUG);
+		
+		if(!isset($this->_routines[get_class($plugin)]))
+		{
+			Ponybot::message('Plugin $0 does not exists in routine list.', array(get_class($plugin)), E_DEBUG);
+			return FALSE;
+		}
+		
+		if(!isset($this->_routines[get_class($plugin)][$method]))
+		{
+			Ponybot::message('Routine does not exists.', array(), E_DEBUG);
+			return FALSE;
+		}
+		
+		$this->_routines[get_class($plugin)][$method][1] = $time;
+		
+		return TRUE;
+	}
+	
+	/** Executes all the routines for all plugins.
+	 * This function executes all the routines for all plugins, whether checking if their interval timed out, or not (so all routines are executed), depending
+	 * on the value of the \b $force param.
+	 * 
+	 * \param $force Forces the routines to be executed or not. By default it does not executes them.
+	 * 
+	 * \return TRUE if routines executed correctly, FALSE otherwise.
+	 */
+	public function callAllRoutines($force = FALSE)
+	{
+		$serverName = Server::getName();
+		foreach($this->_routines as $className => &$class)
+		{
+			foreach($class as $name => &$routine)
+			{
+				if($force || !isset($routine[2][$serverName]) || (time() >= $routine[2][$serverName] + $routine[1] /*&& time() != $routine[2][$serverName] */))
+				{
+					$routine[0]->$name();
+					$routine[2][$serverName] = time();
+				}
+			}
+		}
+	}
+	
+	public function addRegexEvent($regex, $callback)
+	{
+		$this->_regex[] = array($regex, $callback);
+	}
+	
+	public function execRegexEvents($cmd, $string)
+	{
+		foreach($this->_regex as $el)
+		{
+			if(preg_match('#^'.$el[0].'$#isU', $string, $matches))
+				call_user_func_array($el[1], array($cmd, $matches));
+		}
 	}
 }
 
@@ -353,5 +472,15 @@ class Plugin
 	public function destroy()
 	{
 		return TRUE;
+	}
+	
+	public function addRegexEvent($regex, $callback)
+	{
+		$this->_plugins->addRegexEvent($regex, $callback);
+	}
+	
+	public function execRegexEvents($cmd, $string)
+	{
+		$this->_plugins->execRegexEvents($cmd, $string);
 	}
 }

@@ -13,8 +13,9 @@ class IRCConnection
 	
 	public function connect($addr, $port)
 	{
-		$this->_socket = fsockopen($addr, $port);
-		stream_set_blocking($this->_socket, false);
+		$this->_socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
+		socket_connect($this->_socket, $addr, $port);
+		socket_set_nonblock($this->_socket);
 		$this->_lastSend = 0;
 	}
 	
@@ -30,7 +31,7 @@ class IRCConnection
 	
 	public function read()
 	{
-		$data = fgets($this->_socket);
+		$data = socket_read($this->_socket, 1024);
 		if(substr($data, -2) == "\r\n")
 		{
 			$commands = explode("\r\n", $this->_data.$data);
@@ -49,15 +50,21 @@ class IRCConnection
 	
 	public function joinChannels($channels)
 	{
+		$chans = $channels;
 		if(is_array($channels))
-			$channels = join(',', $channels);
+			$chans = join(',', $channels);
+		else
+			$channels = explode(',', str_replace(' ', '', $channels));
 		
-		str_replace(' ', '', $channels);
-		$this->send('JOIN '.$channels);
+		$this->_channels = array_merge($this->_channels, $channels);
+		
+		str_replace(' ', '', $chans);
+		$this->send('JOIN '.$chans);
 	}
 	
 	public function joinChannel($chan)
 	{
+		$this->_channels = array_merge($this->_channels, array($chan));
 		$this->send('JOIN '.$chan);
 	}
 	
@@ -104,7 +111,7 @@ class IRCConnection
 				foreach($data as $msg)
 				{
 					$cmd = $this->parseMsg($msg);
-					Ponybot::$instance->plugins->callEvent('server', strtolower($cmd['command']));
+					Ponybot::$instance->plugins->callEvent('server', strtolower($cmd['command']), $cmd);
 				}
 			} while($cmd['command'] != 366);
 		}
@@ -137,38 +144,40 @@ class IRCConnection
 		return $return;
 	}
 	
-	public function chanUserMode($channel, $user, $mode)
+	public function userMode($user, $mode, $channel = 'all')
 	{
-		$this->send('MODE '.$channel.' '.$mode.' '.$user);
-	}
-	
-	public function giveVoice($channel = 'all', $user)
-	{
+		Ponybot::message("Some user mode change");
 		if($channel == 'all')
 		{
+			var_dump($user);
 			foreach($this->_channels as $chan)
 			{
 				if(in_array($user, $this->getChannelUsers($chan)))
-					$this->send('MODE '.$chan.' +v '.$user);
+					$this->send('MODE '.$chan.' '.$mode.' '.$user);
 			}
 		}
 		else
-			$this->send('MODE '.$channel.' +v '.$user);
+			$this->send('MODE '.$channel.' '.$mode.' '.$user);
 	}
 	
-	public function takeVoice($channel = 'all', $user)
+	public function giveVoice($user, $channel = 'all')
 	{
-		$this->send('MODE '.$channel.' -v '.$user);
+		$this->userMode($user, '+v', $channel);
 	}
 	
-	public function giveOp($channel = 'all', $user)
+	public function takeVoice($user, $channel = 'all')
 	{
-		$this->send('MODE '.$channel.' +o '.$user);
+		$this->userMode($user, '-v', $channel);
 	}
 	
-	public function takeOp($channel = 'all', $user)
+	public function giveOp($user, $channel = 'all')
 	{
-		$this->send('MODE '.$channel.' -o '.$user);
+		$this->userMode($user, '+o', $channel);
+	}
+	
+	public function takeOp($user, $channel = 'all')
+	{
+		$this->userMode($user, '-o', $channel);
 	}
 	
 	public function setChannelUsers($channel, $users)
@@ -186,7 +195,7 @@ class IRCConnection
 					$list[$nick] = 'v';
 					break;
 				default:
-					$list[$user] = 'u';
+					$list[$user] = '';
 			}
 		}
 		
@@ -215,16 +224,20 @@ class IRCConnection
 		Ponybot::message("Got pong.");
 	}
 	
-	public function userRightUpdate($channel, $user, $level)
+	public function userModeAdd($channel, $user, $level)
 	{
-		if(in_array($user, $this->getChannelUsers($channel)) && in_array($level, array('u', 'v', 'o')))
-			$this->_users[$channel][$user] = $level;
+		$this->_users[$channel][$user] .= $level;
+	}
+	
+	public function userModeRemove($channel, $user, $level)
+	{
+		$this->_users[$channel][$user] = str_replace($level, '', $this->_users[$channel][$user]);
 	}
 	
 	public function userJoin($channel, $user)
 	{
 		if(!in_array($user, $this->getChannelUsers($channel)))
-			$this->_users[$channel][$user] = 'u';
+			$this->_users[$channel][$user] = '';
 	}
 	
 	public function userPart($channel, $user)
@@ -249,14 +262,16 @@ class IRCConnection
 			{
 				if($this->_lastCommand + substr($time, 5) <= time())
 				{
-					fputs($this->_socket, $data."\r\n");
+					echo '->['.Server::getName().'] '.$data."\n";
+					socket_write($this->_socket, $data."\r\n");
 					unset($this->_buffer[$time]);
 					$this->_lastTimed = time();
 				}
 			}
 			elseif($this->_lastSend + 2 <= time() || !$this->_floodLimit)
 			{
-				fputs($this->_socket, $data."\r\n");
+				echo '->['.Server::getName().'] '.$data."\n";
+				socket_write($this->_socket, $data."\r\n");
 				unset($this->_buffer[$time]);
 				$this->_lastSend = time();
 			}
