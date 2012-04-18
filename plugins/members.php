@@ -167,6 +167,7 @@ class PluginMembers extends Plugin
 			if($m['host'] == $host)
 			{
 				$m['group'] = $group;
+				$this->saveMembersFile($this->config['File']);
 				return TRUE;
 			}
 		}
