@@ -170,6 +170,8 @@ class PluginBucket extends Plugin
 	
 	public function CommandTLoad($msg)
 	{
+		if(!is_file($this->config['File']))
+			touch($this->config['File']);
 		$this->_tabloids = Ponybot::parseINIStringRecursive(file_get_contents($this->config['File']));
 		IRC::message($msg['channel'], "Loaded tabloids.");
 	}

@@ -234,6 +234,8 @@ class PluginMembers extends Plugin
 	
 	public function loadMembersFile($file)
 	{
+		if(!is_file($file))
+			touch($file);
 		$this->members = Ponybot::parseINIStringRecursive(file_get_contents($file));
 	}
 	

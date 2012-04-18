@@ -79,6 +79,8 @@ class PluginRSS extends Plugin
 	
 	public function loadRSSList($file)
 	{
+		if(!is_file($file))
+			touch($file);
 		$this->rss = Ponybot::parseINIStringRecursive(file_get_contents($file));
 		
 		foreach($this->rss as &$rss)
