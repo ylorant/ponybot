@@ -199,9 +199,9 @@ class IRCConnection
 		Ponybot::message("Some user mode change");
 		if($channel == 'all')
 		{
-			var_dump($user);
 			foreach($this->_channels as $chan)
 			{
+				echo $user."\n";
 				if(in_array($user, $this->getChannelUsers($chan)))
 					$this->send('MODE '.$chan.' '.$mode.' '.$user);
 			}
