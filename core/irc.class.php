@@ -201,6 +201,7 @@ class IRCConnection
 		{
 			foreach($this->_channels as $chan)
 			{
+				var_dump($this->getChannelUsers($chan));
 				echo $user."\n";
 				if(in_array($user, $this->getChannelUsers($chan)))
 					$this->send('MODE '.$chan.' '.$mode.' '.$user);
