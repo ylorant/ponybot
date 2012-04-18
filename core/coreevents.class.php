@@ -24,6 +24,11 @@ class CoreEvents
 	
 	public function ServerConnected($command)
 	{
+		$autoperform = $this->_main->config->getConfig('Servers.'.Server::getName().'.Autoperform');
+		
+		foreach($autoperform as $action)
+			IRC::send($action);
+		
 		$channels = $this->_main->config->getConfig('Servers.'.Server::getName().'.Channels');
 		IRC::joinChannels($channels);
 		$this->_main->initialized = TRUE;

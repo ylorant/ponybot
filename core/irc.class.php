@@ -119,6 +119,56 @@ class IRCConnection
 		return array_keys($this->_users[$channel]);
 	}
 	
+	public function whois($nick)
+	{
+		$this->send("WHOIS $nick");
+		do
+		{
+			do
+			{
+				$data = $this->read();
+				$this->processBuffer();
+			} while(!$data);
+			
+			$info = array();
+			foreach($data as $msg)
+			{
+				$cmd = $this->parseMsg($msg);
+				var_dump($cmd);
+				switch($cmd['command'])
+				{
+					case 401:
+						return FALSE;
+						break;
+						
+					case 311:
+						$info['nick'] = $cmd['additionnal'][0];
+						$info['user'] = $cmd['additionnal'][1];
+						$info['host'] = $cmd['additionnal'][2];
+						break;
+					case 307:
+						if($cmd['message'] == 'is a registered nick')
+							$info['auth'] = $info['nick'];
+						break;
+					case 319:
+						$info['channels'] = explode(' ', $cmd['message']);
+						foreach($info['channels'] as $k => $v)
+						{
+							if(in_array($v[0], array('+', '@')))
+								$info['channels'][substr($v, 1)] = str_replace(array('+', '@'), array('v', 'o'), $v[0]);
+							else
+								$info['channels'][$v] = '';
+							unset($info['channels'][$k]);
+						}
+						break;
+				}
+			}
+			
+		} while($cmd['command'] != 318);
+		
+		return $info;
+	}
+	
 	public function getChannelRights($channel)
 	{
 		if(!isset($this->_users[$channel]))
