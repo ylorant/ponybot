@@ -90,7 +90,7 @@ class Plugins extends Events
 	public function getPlugin($name)
 	{
 		if(isset($this->_plugins[$name]))
-			return $this->_plugins[$name];
+			return $this->_plugins[$name]['obj'];
 		else
 			return false;
 	}

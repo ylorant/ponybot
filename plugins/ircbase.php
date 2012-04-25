@@ -17,6 +17,10 @@ class PluginIRCBase extends Plugin
 			return;
 		
 		$members = $this->_plugins->getPlugin('members');
+		
+		if(!$members)
+			return;
+		
 		if(!in_array($param['user'], $members->getMembersUsers('operators')))
 			return;
 			
