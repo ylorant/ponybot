@@ -87,6 +87,14 @@ class Plugins extends Events
 		return NULL;
 	}
 	
+	public function getPlugin($name)
+	{
+		if(isset($this->_plugins[$name]))
+			return $this->_plugins[$name];
+		else
+			return false;
+	}
+	
 	public function loadPlugin($plugin, $manual = FALSE)
 	{
 		Ponybot::message('Loading plugin $0', array($plugin));

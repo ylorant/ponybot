@@ -94,6 +94,11 @@ class IRCConnection
 		$this->send("PRIVMSG $channel :ACTION $message");
 	}
 	
+	public function getChannels()
+	{
+		return array_keys($this->_channels);
+	}
+	
 	public function getChannelUsers($channel)
 	{
 		if(!isset($this->_users[$channel]))
