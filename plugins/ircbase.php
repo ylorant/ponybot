@@ -1,13 +1,6 @@
 <?php
 class PluginIRCBase extends Plugin
 {
-	public function CommandSay($parameters, $args)
-	{
-		$to = array_shift($args);
-		$message = join(' ', $args);
-		IRC::message($to, $message);
-	}
-	
 	public function CommandAction($param, $args)
 	{
 		IRC::action($param["channel"], join(' ', $args));
