@@ -31,6 +31,12 @@ class PluginIRCBase extends Plugin
 		}
 		
 	}
+	
+	public function ServerInvite($param)
+	{
+		if($param['additionnal'][0] == $this->_main->config->getConfig('Servers.'.Server::getName().'.Nick'))
+			IRC::joinChannel($param['additionnal'][1]);
+	}
 }
 
 $this->addPluginData(array(
