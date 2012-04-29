@@ -32,9 +32,9 @@ class PluginQuotes extends Plugin
 	
 	public function listQuotes($cmd, $data)
 	{
-		IRC::message($cmd['channel'], 'List of all saved quotes:');
+		IRC::message($cmd['nick'], 'List of all saved quotes:');
 		foreach($this->_savedQuotes as $n => $q)
-			IRC::message($cmd['channel'], $n.' - '.$q['season'].'x'.$q['ep'].', '.$q['start'].($q['end'] != -1 ? ' to '.$q['end'] : ''));
+			IRC::message($cmd['nick'], $n.' - '.$q['season'].'x'.$q['ep'].', '.$q['start'].($q['end'] != -1 ? ' to '.$q['end'] : ''));
 	}
 	
 	public function saySavedQuote($cmd, $data)
