@@ -177,7 +177,7 @@ class PluginQuotes extends Plugin
 	
 	private function _parseSrt($lang, $season, $ep, $from, $to = -1, $channel = null, $send = TRUE)
 	{
-		if($ep < 10)
+		if($ep < 10 && strlen($ep) == 1)
 			$ep = '0'.$ep;
 		
 		$fromarray = explode(':', $from);
