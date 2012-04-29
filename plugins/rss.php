@@ -89,9 +89,10 @@ class PluginRSS extends Plugin
 	
 	public function saveRSSList($file)
 	{
-		foreach($this->rss as &$rss)
+		$rsslist = $this->rss;
+		foreach($rsslist as &$rss)
 			$rss['channels'] = join(',', $rss['channels']);
-		file_put_contents($file, Ponybot::generateINIStringRecursive($this->rss));
+		file_put_contents($file, Ponybot::generateINIStringRecursive($rsslist));
 	}
 }
 
