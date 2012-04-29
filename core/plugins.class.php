@@ -438,7 +438,10 @@ class Plugins extends Events
 		foreach($this->_regex as $el)
 		{
 			if(preg_match('#^'.$el[0].'$#isU', $string, $matches))
+			{
 				call_user_func_array($el[1], array($cmd, $matches));
+				break;
+			}
 		}
 	}
 }

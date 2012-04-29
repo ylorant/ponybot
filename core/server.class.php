@@ -19,8 +19,8 @@ class ServerInstance
 		
 		$this->_IRC->connect($config['Address'], $config['Port']);
 		$this->_IRC->setNick($config['Nick'], $config['User']);
-		if(!isset($config['Ping']) || Ponybot::parseBool($config['Ping']))
-			$this->_IRC->waitPing();
+		/*if(!isset($config['Ping']) || Ponybot::parseBool($config['Ping']))
+			$this->_IRC->waitPing();*/
 		usleep(5000);
 		
 		if(isset($config['FloodLimit']) && Ponybot::parseRBool($config['FloodLimit']))
@@ -56,11 +56,28 @@ class ServerInstance
 			if(in_array($command['command'], array('PRIVMSG', 'NOTICE')))
 			{
 				$message = explode(' ', $command['message']);
-				if(strlen($message[0]) && $message[0][0] == '!')
+				if(strlen($message[0]))
 				{
-					$cmdName = substr(array_shift($message), 1);
-					Ponybot::message('Command catched: !$0', array($cmdName), E_DEBUG);
-					$this->_main->plugins->callEvent('command', $cmdName, $command, $message);
+					$message[0] = str_replace(':', '', $message[0]);
+					if($message[0] == $this->_main->config->getConfig('Servers.'.Server::getName().'.Nick'))
+			        {
+						array_shift($message);
+						$string = trim(join(' ', $message));
+			            $this->_main->plugins->execRegexEvents($command, $string);
+			        }
+					switch($message[0][0])
+					{
+						case '!': //Command
+							$cmdName = substr(array_shift($message), 1);
+							Ponybot::message('Command catched: !$0', array($cmdName), E_DEBUG);
+							$this->_main->plugins->callEvent('command', $cmdName, $command, $message);
+							break;
+						case "\x01": //CTCP
+							$cmdName = substr(array_shift($message), 1);
+							Ponybot::message('CTCP Command catched: CTCP$0', array($cmdName), E_DEBUG);
+							$this->_main->plugins->callEvent('command', 'CTCP.'.$cmdName, $command, $message);
+							break;
+					}
 				}
 			}
 		}

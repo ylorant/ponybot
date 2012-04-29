@@ -31,18 +31,8 @@ class PluginBucket extends Plugin
 	public function ServerPrivmsg($cmd)
     {
 		$msg = explode(' ', $cmd['message']);
-        $msg[0] = str_replace(array(',',':'), array('', ''), $msg[0]);
-        if($msg[0] == $this->_main->config->getConfig('Servers.'.Server::getName().'.Nick'))
-        {
-			array_shift($msg);
-			$string = trim(join(' ', $msg));
-            $this->_plugins->callEvent('bucket', $msg[0]);
-            $this->execRegexEvents($cmd, $string);
-        }
-        else
-			$string = trim(join(' ', $msg));
-		
-		$string = strtolower($string);
+		$this->_plugins->callEvent('bucket', $msg[0]);
+		$string = strtolower($cmd['message']);
         if(isset($this->_tabloids[$string]))
         {
 			switch($this->_tabloids[$string]['type'])

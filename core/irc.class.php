@@ -10,6 +10,7 @@ class IRCConnection
 	private $_lastSend = 0;
 	private $_data;
 	private $_floodLimit = false;
+	private $_lastCommand = 0;
 	
 	public function connect($addr, $port)
 	{
@@ -77,6 +78,11 @@ class IRCConnection
 	public function message($to, $message)
 	{
 		$this->send('PRIVMSG '.$to.' :'.$message);
+	}
+	
+	public function timedMessage($to, $message, $time)
+	{
+		$this->send('PRIVMSG '.$to.' :'.$message, $time);
 	}
 	
 	public function notice($to, $message)
@@ -184,14 +190,14 @@ class IRCConnection
 		{
 			switch($level)
 			{
-				case 'u':
-					$return['users'][] = $user;
-					break;
 				case 'v':
 					$return['voice'][] = $user;
 					break;
 				case 'o':
 					$return['operator'][] = $user;
+					break;
+				default:
+					$return['users'][] = $user;
 					break;
 			}
 		}
@@ -268,6 +274,7 @@ class IRCConnection
 			$buffer = $this->read();
 			foreach($buffer as $cmd)
 			{
+				echo '['.Server::getName().'] '.$cmd."\n";
 				$cmd = explode(':', $cmd);
 				if(trim($cmd[0]) == 'PING')
 				{
@@ -277,7 +284,6 @@ class IRCConnection
 			}
 			usleep(5000);
 		}
-		Ponybot::message("Got pong.");
 	}
 	
 	public function userModeAdd($channel, $user, $level)
@@ -316,12 +322,11 @@ class IRCConnection
 		{
 			if(substr($time, 0, 5) == 'time:')
 			{
-				if($this->_lastCommand + substr($time, 5) <= time())
+				if(substr($time, 5) == time())
 				{
 					echo '->['.Server::getName().'] '.$data."\n";
 					socket_write($this->_socket, $data."\r\n");
 					unset($this->_buffer[$time]);
-					$this->_lastTimed = time();
 				}
 			}
 			elseif($this->_lastSend + 2 <= time() || !$this->_floodLimit)
@@ -332,6 +337,29 @@ class IRCConnection
 				$this->_lastSend = time();
 			}
 		}
+	}
+	
+	public function emptyBufferMessages($channel)
+	{
+		foreach($this->_buffer as $k => $v)
+		{
+			Ponybot::message($v);
+			$v = explode(' ', $v);
+			if(($v[0] == 'PRIVMSG' || $v[0] == 'NOTICE') && isset($v[1]) && $v[1] == $channel)
+				unset($this->_buffer[$k]);
+		}
+	}
+	
+	public function getLastBufferTime()
+	{
+		$last = '';
+		$b = array_keys($this->_buffer);
+		do
+		{
+			$last = array_pop($b);
+		} while(substr($last, 0, 4) != 'time');
+		
+		return substr($last, 5);
 	}
 	
 	public function parseMsg($message)

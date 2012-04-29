@@ -1,0 +1,278 @@
+[Script Info]
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 384
+PlayResY: 288
+Timer: 100.0000
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Tahoma,12,&H00000000,&H00FFFFFF,&H00FFFFFF,&H00C0C0C0,-1,0,0,0,100,100,0,0.00,1,2,3,2,20,20,20,1
+
+[Events]
+Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:14.82,0:00:15.14,Default,,0000,0000,0000,,Oh ! Salut, Pinkie Pie.
+Dialogue: 0,0:00:15.34,0:00:18.66,Default,,0000,0000,0000,,This is your singing telegram, I hope it finds you wellN(=Voici ton télégramme chantant, j'espère que tu vas bien)
+Dialogue: 0,0:00:18.67,0:00:21.60,Default,,0000,0000,0000,,You’re invited to a party ’cause we think you’re really swellN(=Tu es invitée à une fête parce qu'on pense que tu t'es géniale)
+Dialogue: 0,0:00:21.60,0:00:24.48,Default,,0000,0000,0000,,Gummy’s turning one year old, so help us celebrateN(=Gummy aura un an de plus alors aide-nous à le célébrer)
+Dialogue: 0,0:00:24.51,0:00:27.59,Default,,0000,0000,0000,,The cake will be delicious, the festivities first rateN(=Le gâteau sera délicieux et les festivités de premier choix)
+Dialogue: 0,0:00:28.46,0:00:31.55,Default,,0000,0000,0000,,There will be games and dancing, bob for apples, cut a rugN(=Il y aura des jeux et de la danse, viens guincher)
+Dialogue: 0,0:00:31.28,0:00:34.23,Default,,0000,0000,0000,,And when the party’s over we’ll gather around for a group hugN(=Et quand la fête sera finie, on se réunira pour un câlin)
+Dialogue: 0,0:00:35.17,0:00:38.56,Default,,0000,0000,0000,,No need to bring a gift, being there will be enoughN(=Pas besoin d'apporter un cadeau, être présent est suffisant)
+Dialogue: 0,0:00:38.56,0:00:42.69,Default,,0000,0000,0000,,Birthdays mean having fun with friends, not getting lots of stuffN(=Les anniversaires sont faits pour prendre du plaisir avec les amis, pas s'en mettre plein les poches)
+Dialogue: 0,0:00:43.13,0:00:47.91,Default,,0000,0000,0000,,It won't be the same without you so we hope that you say 'yes'N(=Ca ne sera pas pareil sans toi alors on espère que tu diras 'oui')
+Dialogue: 0,0:00:47.91,0:00:52.62,Default,,0000,0000,0000,,So, please, oh please, R.S.V.P., and come and be our guestN(=Alors, s'il te plait, oh s'il te plait, réponds et sois notre invitée).
+Dialogue: 0,0:00:56.52,0:01:00.45,Default,,0000,0000,0000,,La prochaine fois je crois que j'enverrai des invitations écrites.
+Dialogue: 0,0:01:53.58,0:01:56.52,Default,,0000,0000,0000,,Pas mal ! Maintenant laisse-moi te montrer comment on fait réellement.
+Dialogue: 0,0:01:57.17,0:01:58.18,Default,,0000,0000,0000,,- Hé les filles !
+Dialogue: 0,0:01:58.18,0:01:59.18,Default,,0000,0000,0000,,- Hé Pinkie Pie !
+Dialogue: 0,0:01:59.68,0:02:00.18,Default,,0000,0000,0000,,- Hé !
+Dialogue: 0,0:02:00.97,0:02:04.26,Default,,0000,0000,0000,,- Je voulais juste vous dire à quel point j'étais heureuse que vous ayez pu venir à l'anniv' de Gummy.
+Dialogue: 0,0:02:04.26,0:02:06.81,Default,,0000,0000,0000,,- Je ne l'aurais manquée pour rien au monde.
+Dialogue: 0,0:02:06.81,0:02:07.81,Default,,0000,0000,0000,,- Moi aussi.
+Dialogue: 0,0:02:07.81,0:02:10.96,Default,,0000,0000,0000,,Quand Pinkie Pie fait une fête, je suis toujours là.
+Dialogue: 0,0:02:13.37,0:02:14.74,Default,,0000,0000,0000,,Ta-dah !
+Dialogue: 0,0:02:14.74,0:02:19.82,Default,,0000,0000,0000,,- Oh ! C'est juste une vieille pomme toute nulle. Vous inquiétez pas, il y a plein d'autres surprises dedans.
+Dialogue: 0,0:02:19.82,0:02:20.82,Default,,0000,0000,0000,,- Quelle genre de surprises ?
+Dialogue: 0,0:02:21.22,0:02:24.45,Default,,0000,0000,0000,,- Je ne peux pas vous le dire sinon ça ne serait plus une surprise !
+Dialogue: 0,0:02:39.52,0:02:45.30,Default,,0000,0000,0000,,Ce punch est simplement divin. Est-ce que c'est la même recette que tu as utilisée pour la fête du printemps ?
+Dialogue: 0,0:02:45.30,0:02:46.40,Default,,0000,0000,0000,,- Non, quelque chose de différent.
+Dialogue: 0,0:02:51.57,0:02:53.38,Default,,0000,0000,0000,,C'est le préféré de Gummy.
+Dialogue: 0,0:02:58.60,0:03:00.80,Default,,0000,0000,0000,,Oouh ! C'est ma chanson.
+Dialogue: 0,0:03:04.87,0:03:06.01,Default,,0000,0000,0000,,Vous vous amusez ?
+Dialogue: 0,0:03:06.01,0:03:07.01,Default,,0000,0000,0000,,- A fond.
+Dialogue: 0,0:03:07.31,0:03:10.31,Default,,0000,0000,0000,,- Tu organises toujours les meilleures fêtes, Pinkie Pie.
+Dialogue: 0,0:03:10.41,0:03:13.81,Default,,0000,0000,0000,,- Ce sont les meilleures fêtes car mes meilleures amies y sont !
+Dialogue: 0,0:03:17.67,0:03:19.38,Default,,0000,0000,0000,,Allez tout le monde !
+Dialogue: 0,0:03:20.88,0:03:23.16,Default,,0000,0000,0000,,Gummy veut danser !
+Dialogue: 0,0:03:23.46,0:03:27.41,Default,,0000,0000,0000,,Allez Gummy, c'est ton anniv', allez Gummy, c'est ton anniv' !
+Dialogue: 0,0:03:34.01,0:03:38.55,Default,,0000,0000,0000,,J'suis morte. J'ai pas autant danser depuis... depuis ta dernière fête.
+Dialogue: 0,0:03:38.55,0:03:40.07,Default,,0000,0000,0000,,Merci encore pour l'invitation.
+Dialogue: 0,0:03:40.08,0:03:41.38,Default,,0000,0000,0000,,- A plus monsieur l'alligator !
+Dialogue: 0,0:03:41.38,0:03:44.10,Default,,0000,0000,0000,,- Bravo pour avoir organisé une énième superbe fête.
+Dialogue: 0,0:03:44.10,0:03:45.10,Default,,0000,0000,0000,,- C'était super.
+Dialogue: 0,0:03:46.53,0:03:49.46,Default,,0000,0000,0000,,- T'es sûre que tu veux pas rester ? Il reste encore du gâteau.
+Dialogue: 0,0:03:49.46,0:03:51.75,Default,,0000,0000,0000,,- Euuuh, je crois que je vais décliner.
+Dialogue: 0,0:03:52.29,0:03:55.02,Default,,0000,0000,0000,, Superbe fête cependant. Faudra se remettre ça bientôt.
+Dialogue: 0,0:03:58.27,0:04:00.23,Default,,0000,0000,0000,,On se doit de remettre ça bientôt !
+Dialogue: 0,0:04:11.31,0:04:12.22,Default,,0000,0000,0000,,Oh ! Salut Pinki--
+Dialogue: 0,0:04:12.22,0:04:13.02,Default,,0000,0000,0000,,- C'est 'bientôt' !
+Dialogue: 0,0:04:13.42,0:04:14.02,Default,,0000,0000,0000,,- Je te demande pardon ?
+Dialogue: 0,0:04:14.65,0:04:17.42,Default,,0000,0000,0000,,- Tu as dit qu'il faudrait refaire une fête bientôt. Et, c'est maintenant.
+Dialogue: 0,0:04:17.42,0:04:18.52,Default,,0000,0000,0000,,Voilà ton invitation.
+Dialogue: 0,0:04:19.90,0:04:22.77,Default,,0000,0000,0000,,- Tu es invitée à "l'after" de l'anniversaire de Gummy.
+Dialogue: 0,0:04:22.77,0:04:24.61,Default,,0000,0000,0000,,Cette après-midi à 15h.
+Dialogue: 0,0:04:24.61,0:04:29.44,Default,,0000,0000,0000,,- Toutes tes meilleures amies sont invitées, il va y avoir de la danse, des jeux, des gâteaux, des crèmes glacées et du punch !
+Dialogue: 0,0:04:29.64,0:04:34.28,Default,,0000,0000,0000,,- Cette après-midi ? Genre cette après-midi, cette après-midi ?
+Dialogue: 0,0:04:34.28,0:04:35.48,Default,,0000,0000,0000,,- Oui en effet.
+Dialogue: 0,0:04:35.58,0:04:40.84,Default,,0000,0000,0000,,- Oh euh... j'aimerais pouvoir venir mais j'ai pris un peu de retard sur les études.
+Dialogue: 0,0:04:43.13,0:04:44.83,Default,,0000,0000,0000,,Faut vraiment que je me replonge dans les livres.
+Dialogue: 0,0:04:45.88,0:04:48.11,Default,,0000,0000,0000,,- Je comprends. Tes études passent avant.
+Dialogue: 0,0:04:48.11,0:04:50.77,Default,,0000,0000,0000,,Ne t'inquiètes pas, on te gardera du gâteau.
+Dialogue: 0,0:04:50.78,0:04:51.78,Default,,0000,0000,0000,,- Fais donc.
+Dialogue: 0,0:04:52.08,0:04:56.70,Default,,0000,0000,0000,,- Oh et Twilight, tu devrais pas plonger dans les livres, tu devrais juste les lire. 
+Dialogue: 0,0:04:56.71,0:04:57.91,Default,,0000,0000,0000,,- Je garderai ça à l'esprit.
+Dialogue: 0,0:05:01.56,0:05:03.93,Default,,0000,0000,0000,,Hum ?NOh, salut, Pinkie Pie.
+Dialogue: 0,0:05:03.93,0:05:05.81,Default,,0000,0000,0000,,Qu'est-ce qui t'amène par ici ?
+Dialogue: 0,0:05:05.81,0:05:08.72,Default,,0000,0000,0000,,Qui est prêt à se trémousser ? 
+Dialogue: 0,0:05:09.93,0:05:13.21,Default,,0000,0000,0000,,C'est une invitation pour "l'after" de l'anniversaire de Gummy cette après-midi.
+Dialogue: 0,0:05:13.21,0:05:15.46,Default,,0000,0000,0000,,Il va y avoir de la danse, des jeux, des gâteaux, des crèmes glacées et du punch !
+Dialogue: 0,0:05:15.67,0:05:19.59,Default,,0000,0000,0000,,- Cette après-midi ? Genre cette après-midi, cette après-midi ?
+Dialogue: 0,0:05:19.59,0:05:21.95,Default,,0000,0000,0000,,- C'est drôle, c'est ce que Twilight a demandé. 
+Dialogue: 0,0:05:21.95,0:05:24.73,Default,,0000,0000,0000,,Et la réponse est: oui ! Cette après-midi.
+Dialogue: 0,0:05:24.73,0:05:28.63,Default,,0000,0000,0000,,- Euh... euh ah... j'pense pas pouvoir venir.
+Dialogue: 0,0:05:28.63,0:05:34.10,Default,,0000,0000,0000,,- Parce que je dois euh... tu sais... euh ah euh, ramasser des pommes !
+Dialogue: 0,0:05:34.10,0:05:38.24,Default,,0000,0000,0000,,Oui, pommes. Parce que c'est ce que nous faisons avec les... pommes...
+Dialogue: 0,0:05:38.24,0:05:40.66,Default,,0000,0000,0000,,nous... les ramassons.
+Dialogue: 0,0:05:49.81,0:05:54.06,Default,,0000,0000,0000,,Okie dokie lokie.NUne fête reste une fête, même avec seulement trois invités !
+Dialogue: 0,0:06:01.38,0:06:04.70,Default,,0000,0000,0000,,Autre chose que je puisse faire pour toi, ô la plus magnifique de toutes ?
+Dialogue: 0,0:06:06.41,0:06:07.94,Default,,0000,0000,0000,,- Peut-être devrais-tu prendre un bain.
+Dialogue: 0,0:06:08.56,0:06:10.16,Default,,0000,0000,0000,,Comment t'expliquer délicatement...
+Dialogue: 0,0:06:10.16,0:06:15.53,Default,,0000,0000,0000,,Tu sens comme une un rognon de pomme pourri qui aurait été emballé dans du foin moisi, puis trempé dans de la transpiration de dragon.
+Dialogue: 0,0:06:21.95,0:06:25.88,Default,,0000,0000,0000,,Ooh ! J'adore ce chapeau. Très moderne. C'est pour quelle occasion ?
+Dialogue: 0,0:06:25.88,0:06:29.37,Default,,0000,0000,0000,,- "L'after" de l'anniv' de Gummy cette après-midi. Je livre les invitations.
+Dialogue: 0,0:06:29.77,0:06:34.29,Default,,0000,0000,0000,,- La fête est cette après-midi ? Genre cette après-midi, cette après-midi ?
+Dialogue: 0,0:06:34.29,0:06:38.65,Default,,0000,0000,0000,,- C'est trop bizarre, tout le monde n'arrête pas de dire ça. N- Oh, vraiment... ?
+Dialogue: 0,0:06:38.65,0:06:44.51,Default,,0000,0000,0000,,- Je sais que ça fait tôt. Mais on s'est tellement amusées la dernière fois que je me suis dit qu'on devait remettre ça avec cet "after".
+Dialogue: 0,0:06:44.51,0:06:49.86,Default,,0000,0000,0000,,- Je suis sûre qu'on s'amuserait bien, mais je vais devoir décliner. Je dois... laver mes cheveux.
+Dialogue: 0,0:06:50.06,0:06:52.33,Default,,0000,0000,0000,,- Ne sois pas loufoque, tes cheveux n'ont pas l'air sales.
+Dialogue: 0,0:06:52.33,0:06:53.88,Default,,0000,0000,0000,,- Ils n'ont pas l'air ?N- Non.
+Dialogue: 0,0:06:58.36,0:07:00.33,Default,,0000,0000,0000,,Tu vois ? Sales...
+Dialogue: 0,0:07:00.53,0:07:02.12,Default,,0000,0000,0000,,Je dois y aller...
+Dialogue: 0,0:07:03.82,0:07:07.09,Default,,0000,0000,0000,,Pas de Twilight, pas d'Applejack, pas de Rarity...
+Dialogue: 0,0:07:07.59,0:07:11.19,Default,,0000,0000,0000,,Tant pis, une fête reste une fête même avec seulement deux invités !
+Dialogue: 0,0:07:12.15,0:07:14.44,Default,,0000,0000,0000,,- Cette après-midi ?N-Genre...
+Dialogue: 0,0:07:14.44,0:07:17.04,Default,,0000,0000,0000,,- Oui ! Genre cette après-midi, cette après-midi.
+Dialogue: 0,0:07:17.04,0:07:22.22,Default,,0000,0000,0000,,- Oh mince... on adorerait, mais, on garde une maison cette après-midi.
+Dialogue: 0,0:07:22.22,0:07:23.52,Default,,0000,0000,0000,,- Vous deux ?
+Dialogue: 0,0:07:23.72,0:07:26.41,Default,,0000,0000,0000,,- C'est euh... une grande maison.
+Dialogue: 0,0:07:27.67,0:07:30.22,Default,,0000,0000,0000,,- Oh regarde l'heure ! On devrait vraiment y aller.
+Dialogue: 0,0:07:31.64,0:07:32.60,Default,,0000,0000,0000,,Attendez !
+Dialogue: 0,0:07:32.60,0:07:36.87,Default,,0000,0000,0000,,Peut-être que je pourrais vous apporter des gâteaux et des crèmes glacées. NVous gardez la maison de qui ?
+Dialogue: 0,0:07:36.87,0:07:38.07,Default,,0000,0000,0000,,- Harry.N- Harry ?
+Dialogue: 0,0:07:38.07,0:07:40.01,Default,,0000,0000,0000,,- Oui, je pense pas que tu le connaisses.
+Dialogue: 0,0:07:40.01,0:07:42.79,Default,,0000,0000,0000,,- C'est bizarre, je connais tout le monde par ici.
+Dialogue: 0,0:07:42.79,0:07:44.18,Default,,0000,0000,0000,,- C'est un ours.
+Dialogue: 0,0:07:44.18,0:07:45.18,Default,,0000,0000,0000,,- Un ours ?
+Dialogue: 0,0:07:46.55,0:07:51.23,Default,,0000,0000,0000,,- Yup, c'est un ours en effet. Et cela le contrarierait qu'on arrive en retard.
+Dialogue: 0,0:07:52.66,0:07:53.34,Default,,0000,0000,0000,,- Attendez !
+Dialogue: 0,0:07:54.06,0:07:56.37,Default,,0000,0000,0000,,- Il y a un ours par ici qui vit dans une maison ?
+Dialogue: 0,0:07:56.38,0:07:58.73,Default,,0000,0000,0000,,- C'est plus une cave...
+Dialogue: 0,0:07:58.73,0:08:02.05,Default,,0000,0000,0000,,- Mais il l'a arrangée pour que ça ressemble davantage à une maison !
+Dialogue: 0,0:08:02.05,0:08:06.15,Default,,0000,0000,0000,,- Et euh... il veut qu'on s'occupe de sa maison... euh cave, pendant qu'il est...
+Dialogue: 0,0:08:06.15,0:08:07.15,Default,,0000,0000,0000,,- A la plage !
+Dialogue: 0,0:08:07.15,0:08:08.81,Default,,0000,0000,0000,,- Il prend du bon temps à la plage ?
+Dialogue: 0,0:08:08.81,0:08:10.21,Default,,0000,0000,0000,,- Oui, il adore...
+Dialogue: 0,0:08:12.08,0:08:13.74,Default,,0000,0000,0000,,- Ramasser des coquillages.N- Jouer au volley-ball.
+Dialogue: 0,0:08:13.74,0:08:15.52,Default,,0000,0000,0000,,- Jouer au volley-ball.N- Ramasser des coquillages.
+Dialogue: 0,0:08:15.52,0:08:17.69,Default,,0000,0000,0000,,- Ramasser des volley-balls.N- Jouer aux coquillages.
+Dialogue: 0,0:08:18.95,0:08:20.24,Default,,0000,0000,0000,,On doit y aller !
+Dialogue: 0,0:08:24.38,0:08:27.51,Default,,0000,0000,0000,,Quelque chose de pas net se passe, Gummy.
+Dialogue: 0,0:08:27.51,0:08:30.77,Default,,0000,0000,0000,,Rainbow Dash et Fluttershy doivent garder la maison d'un ours à la plage, 
+Dialogue: 0,0:08:30.78,0:08:34.08,Default,,0000,0000,0000,,mais quelles étaient les chances que les autres aient des projets pour cette aprèm aussi ?
+Dialogue: 0,0:08:34.18,0:08:41.31,Default,,0000,0000,0000,,Rarity doit laver ses cheveux... Applejack doit ramasser des pommes... Twilight étudie et doit plonger dans les livres...
+Dialogue: 0,0:08:41.31,0:08:45.84,Default,,0000,0000,0000,,Plus j'y pense et plus je me dis que ça ressemble à [souffle coupé]
+Dialogue: 0,0:08:45.85,0:08:47.35,Default,,0000,0000,0000,,des excuses !
+Dialogue: 0,0:08:58.03,0:09:01.20,Default,,0000,0000,0000,,C'est pas ce que j'appelle étudier, ni plonger...
+Dialogue: 0,0:09:12.17,0:09:14.23,Default,,0000,0000,0000,,Oh, tu dois être ici pour...N- Shht.
+Dialogue: 0,0:09:15.36,0:09:16.80,Default,,0000,0000,0000,,Est-ce que Pinkie Pie est aux alentours ?
+Dialogue: 0,0:09:16.80,0:09:17.90,Default,,0000,0000,0000,,- Je ne pense pas.
+Dialogue: 0,0:09:18.54,0:09:21.44,Default,,0000,0000,0000,,- Bien. Je veux qu'elle ne sache rien de ceci.
+Dialogue: 0,0:09:21.44,0:09:24.29,Default,,0000,0000,0000,,- Oui bien sûr. Je reviens.
+Dialogue: 0,0:09:26.17,0:09:30.81,Default,,0000,0000,0000,,Mais... nous sommes des amies. Qu'est-ce que Twilight veut me cacher ?
+Dialogue: 0,0:09:32.00,0:09:33.25,Default,,0000,0000,0000,,Oh, elle revient.
+Dialogue: 0,0:09:33.38,0:09:37.86,Default,,0000,0000,0000,,- Et voilà.N- Merci. Rappelez-vous, pas un mot à Pinkie.
+Dialogue: 0,0:09:38.45,0:09:40.72,Default,,0000,0000,0000,,Hé ! C'est quoi cette canette ?
+Dialogue: 0,0:09:59.71,0:10:02.62,Default,,0000,0000,0000,,Il est temps de tirer ça au clair.
+Dialogue: 0,0:10:14.01,0:10:17.73,Default,,0000,0000,0000,,Je crois que notre couverture est foutue. On va avoir besoin d'un nouveau déguisement.
+Dialogue: 0,0:10:28.03,0:10:30.49,Default,,0000,0000,0000,,Elle ne t'a pas vue à la confiserie, hein ?
+Dialogue: 0,0:10:30.49,0:10:31.49,Default,,0000,0000,0000,,- Je ne pense pas.
+Dialogue: 0,0:10:32.08,0:10:34.54,Default,,0000,0000,0000,,- Très bien. Je n'aurais pas voulu qu'elle gâche tout.
+Dialogue: 0,0:10:34.71,0:10:35.62,Default,,0000,0000,0000,,- Moi non plus.
+Dialogue: 0,0:11:02.14,0:11:03.52,Default,,0000,0000,0000,,L'as-tu vue ?
+Dialogue: 0,0:11:03.52,0:11:04.52,Default,,0000,0000,0000,,- Pas depuis ce matin.
+Dialogue: 0,0:11:04.52,0:11:09.60,Default,,0000,0000,0000,,- Moi non plus. Arrives-tu à croire qu'elle projettait une fête pour aujourd'hui ?
+Dialogue: 0,0:11:09.60,0:11:13.05,Default,,0000,0000,0000,,- Je suis contente d'avoir pu trouver une excuse pour prétexter mon absence.
+Dialogue: 0,0:11:13.05,0:11:16.45,Default,,0000,0000,0000,,- Moi aussi. Ca qu'on va faire va être tellement mieux.
+Dialogue: 0,0:11:16.45,0:11:19.51,Default,,0000,0000,0000,,- Tant qu'elle ne découvre rien de tout celà, oui.
+Dialogue: 0,0:11:21.52,0:11:23.01,Default,,0000,0000,0000,,A plus.
+Dialogue: 0,0:11:37.05,0:11:40.07,Default,,0000,0000,0000,,Je pensais que tout le monde aimait mes fêtes.
+Dialogue: 0,0:11:40.07,0:11:41.47,Default,,0000,0000,0000,,- Salut Pinkie Pie !
+Dialogue: 0,0:11:43.19,0:11:44.24,Default,,0000,0000,0000,,Oh oh...
+Dialogue: 0,0:11:44.96,0:11:46.85,Default,,0000,0000,0000,,Rainbow Dash ! Attends !
+Dialogue: 0,0:11:52.30,0:11:54.19,Default,,0000,0000,0000,,Pfiou...N- Où vas-tu ?
+Dialogue: 0,0:12:03.26,0:12:06.44,Default,,0000,0000,0000,,QUELLE EST LA VERITABLE RAISON QUI SE CACHE DERRIERE VOTRE REFUS DE VENIR A LA FETE DE GUMMY ?!
+Dialogue: 0,0:12:18.35,0:12:20.37,Default,,0000,0000,0000,,QU'EST-CE QU'IL Y A DANS LES SACS ?!
+Dialogue: 0,0:12:26.60,0:12:28.58,Default,,0000,0000,0000,,Applejack ! On a un problème !
+Dialogue: 0,0:12:35.71,0:12:37.89,Default,,0000,0000,0000,,Je sais que vous êtes dedans !
+Dialogue: 0,0:12:39.22,0:12:40.99,Default,,0000,0000,0000,,- Oh, salut.
+Dialogue: 0,0:12:40.99,0:12:44.18,Default,,0000,0000,0000,,- Ca te dérange si je jette un oeil dans la grange ?
+Dialogue: 0,0:12:44.18,0:12:48.18,Default,,0000,0000,0000,,- Non. Euh j'veux dire oui, j'veux dire, tu peux pas v'nir dedans.
+Dialogue: 0,0:12:48.18,0:12:49.85,Default,,0000,0000,0000,,- Rainbow Dash vient d'entrer.
+Dialogue: 0,0:12:49.85,0:12:55.31,Default,,0000,0000,0000,,- Oh, eh bien, elle faisait qu'apporter du matériel... yup... pour... la rénovation !
+Dialogue: 0,0:12:55.31,0:12:57.48,Default,,0000,0000,0000,,On rénove cette bicoque des pieds à la tête.
+Dialogue: 0,0:12:57.48,0:13:00.73,Default,,0000,0000,0000,,On fait beaucoup de travaux dedans en ce moment !
+Dialogue: 0,0:13:00.73,0:13:03.01,Default,,0000,0000,0000,, *Tu l'as entendue, des travaux*
+Dialogue: 0,0:13:22.03,0:13:25.51,Default,,0000,0000,0000,,Yup, travaux. Voilà ce que j'ai à déclarer et je maintiens.
+Dialogue: 0,0:13:37.34,0:13:40.16,Default,,0000,0000,0000,,Okie dokie lokie.
+Dialogue: 0,0:13:50.04,0:13:53.85,Default,,0000,0000,0000,,Mensonges et secrets, que des mensonges et secrets avec ces poneys !
+Dialogue: 0,0:13:53.85,0:13:57.55,Default,,0000,0000,0000,,Elles préparent quelque chose, Gummy. Quelque chose qu'elles ne veulent pas me dire.
+Dialogue: 0,0:13:57.55,0:14:01.65,Default,,0000,0000,0000,,Mais je vais découvrir ce que c'est. NEt comment que je vais le savoir !
+Dialogue: 0,0:14:01.65,0:14:07.44,Default,,0000,0000,0000,,Et je connais justement qui va cracher le morceau. NEt comment qu'il cracher le morceau !
+Dialogue: 0,0:14:08.71,0:14:11.26,Default,,0000,0000,0000,,Wow ! Joli festin. 
+Dialogue: 0,0:14:12.17,0:14:13.73,Default,,0000,0000,0000,,- C'est tout à toi, Spike. 
+Dialogue: 0,0:14:18.94,0:14:20.82,Default,,0000,0000,0000,,Tout ce que tu as à faire, c'est parler.
+Dialogue: 0,0:14:22.38,0:14:24.36,Default,,0000,0000,0000,,- C'est tout ? Ah ok.
+Dialogue: 0,0:14:24.36,0:14:31.27,Default,,0000,0000,0000,,Joli temps, n'est-ce pas ? J'adore le printemps.NLes oiseaux qui chantent, et les fleurs qui s'épanouissent...
+Dialogue: 0,0:14:31.27,0:14:33.76,Default,,0000,0000,0000,,- Non, non non.NParle de nos amis.
+Dialogue: 0,0:14:34.59,0:14:40.83,Default,,0000,0000,0000,,- Oh... ok. Il y a Twilight Sparkle, c'est une licorne... Bonne magicienne. Un peu intello.
+Dialogue: 0,0:14:40.83,0:14:46.62,Default,,0000,0000,0000,,Et après il y a Rarity, une vraie bombe ! Twilight semble penser que je n'ai pas une chance. Mais humpf, qu'est-ce qu'elle en sait...
+Dialogue: 0,0:14:46.62,0:14:50.79,Default,,0000,0000,0000,,Il y a... Fluttershy, une pégase qui a le vertige. Humpf ! N'est-ce pas bizarre ?
+Dialogue: 0,0:14:50.80,0:14:54.99,Default,,0000,0000,0000,,- Non ! Tu ne m'as pas comprise ! Je veux que tu te confesses !
+Dialogue: 0,0:14:54.99,0:14:57.43,Default,,0000,0000,0000,,- Confesser ?N- Confesse !
+Dialogue: 0,0:14:59.87,0:15:04.06,Default,,0000,0000,0000,,- Je suis celui qui a renversé du soda sur le livre "Magical mysteries and practical potions" de Twilight.
+Dialogue: 0,0:15:04.98,0:15:05.89,Default,,0000,0000,0000,,- ... et ?
+Dialogue: 0,0:15:05.89,0:15:10.61,Default,,0000,0000,0000,,- Et je suis celui qui a utilisé toute l'eau chaude de Poneyville hier quand j'ai pris un bain de 7 heures !
+Dialogue: 0,0:15:11.25,0:15:12.17,Default,,0000,0000,0000,,- ... et ?
+Dialogue: 0,0:15:13.45,0:15:16.92,Default,,0000,0000,0000,,- Et quelques fois, quand il n'y a personne, je fais ça:
+Dialogue: 0,0:15:17.92,0:15:20.86,Default,,0000,0000,0000,, "Qu'est-ce que t'es beau, Spike. Vraiment beau !"
+Dialogue: 0,0:15:24.31,0:15:26.51,Default,,0000,0000,0000,,Non, non, non, non !
+Dialogue: 0,0:15:27.97,0:15:31.42,Default,,0000,0000,0000,,- Mais qu'est-ce que tu veux entendre ? Dis-moi ce que tu veux que je dise et je le dirai !
+Dialogue: 0,0:15:31.42,0:15:37.52,Default,,0000,0000,0000,,- Dis-moi que mes amies me mentent et m'évitent car elles n'aiment pas mes fêtes et qu'ELLES NE VEULENT PLUS ETRE MES AMIES DESORMAIS !
+Dialogue: 0,0:15:39.70,0:15:43.82,Default,,0000,0000,0000,,- "Tes amies te mentent et t'évitent parce qu'elles n'aiment pas tes fêtes et qu'elles ne veulent plus être tes amies désormais !"
+Dialogue: 0,0:15:43.82,0:15:46.28,Default,,0000,0000,0000,,- Ah ah ! Je le savais !
+Dialogue: 0,0:15:50.47,0:15:55.24,Default,,0000,0000,0000,,Oh non... Mes amies n'aiment pas mes fêtes et ne veulent plus être mes amies désormais...
+Dialogue: 0,0:15:58.07,0:16:00.18,Default,,0000,0000,0000,,- Euuuh... alors...
+Dialogue: 0,0:16:11.45,0:16:15.32,Default,,0000,0000,0000,,Merci à tous d'être venus ! Ca représente beaucoup pour Gummy !
+Dialogue: 0,0:16:16.93,0:16:21.49,Default,,0000,0000,0000,,- Puis-je avoir un peu plus de Punch ?N- Oh bien sûr que tu peux avoir du Punch, Mr le Navet !
+Dialogue: 0,0:16:25.22,0:16:31.13,Default,,0000,0000,0000,,- C'est une fête géniale, tu t'es vraiment surpassée !N- Ouais, merci Rocky.
+Dialogue: 0,0:16:31.78,0:16:37.31,Default,,0000,0000,0000,,- Je passe un excellent moment aussi ! N- J'en suis si heureuse, Sir Lintsalot.
+Dialogue: 0,0:16:38.05,0:16:44.20,Default,,0000,0000,0000,,- Désolée de vous couper mais puis-je avoir un autre morceau de gâteau ?N- Tout ce que vous voulez, Madame la Farine !
+Dialogue: 0,0:16:45.36,0:16:48.32,Default,,0000,0000,0000,,- Je suis bien content qu'aucun poney soit venu.
+Dialogue: 0,0:16:49.16,0:16:51.87,Default,,0000,0000,0000,,- Oh... ils ne sont pas si méchants...
+Dialogue: 0,0:16:55.12,0:16:59.67,Default,,0000,0000,0000,,"Pas si méchants ?" Oh steuplé ! Ce ne sont que des idiotes !
+Dialogue: 0,0:17:01.22,0:17:05.25,Default,,0000,0000,0000,,- Oh voyons... "idiotes" est peut-être un peu fort, ne crois-tu pas ?
+Dialogue: 0,0:17:05.25,0:17:09.96,Default,,0000,0000,0000,,- Après la façon dont ils t'ont traitée ? Moi je dis que "idiotes" n'est pas assez fort !
+Dialogue: 0,0:17:10.72,0:17:12.55,Default,,0000,0000,0000,,- C'était assez blessant...
+Dialogue: 0,0:17:13.06,0:17:17.18,Default,,0000,0000,0000,,- Assez blessant ? C'était tout simplement dégueulasse !
+Dialogue: 0,0:17:17.18,0:17:18.94,Default,,0000,0000,0000,,- Ca l'était oui, pas vrai ?
+Dialogue: 0,0:17:19.45,0:17:22.99,Default,,0000,0000,0000,,- Si j'étais toi, je ne leur parlerai plus jamais. 
+Dialogue: 0,0:17:23.00,0:17:28.83,Default,,0000,0000,0000,,- Tu sais quoi ? Je ne leur parlerai jamais plus ! Et tant que je vivrai je ne les inviterai plus à une seule fête !
+Dialogue: 0,0:17:28.83,0:17:34.18,Default,,0000,0000,0000,,Elles ne méritent plus d'être invitées à mes fêtes... pas après la façon dont elles se sont comportées...
+Dialogue: 0,0:17:34.18,0:17:35.98,Default,,0000,0000,0000,,- Dégueulasse !N- Idiotes !
+Dialogue: 0,0:17:35.98,0:17:36.98,Default,,0000,0000,0000,,- Oui, c'est vrai.
+Dialogue: 0,0:17:37.38,0:17:38.38,Default,,0000,0000,0000,,- Bien fait !
+Dialogue: 0,0:17:39.08,0:17:40.65,Default,,0000,0000,0000,, Ouais !N- Montre leur !
+Dialogue: 0,0:17:41.49,0:17:42.79,Default,,0000,0000,0000,,Qui ça peut être ?
+Dialogue: 0,0:17:44.29,0:17:47.70,Default,,0000,0000,0000,,- Hé Pinkie Pie, désolée d'avoir été aussi pressée tout à l'heure. 
+Dialogue: 0,0:17:47.70,0:17:51.34,Default,,0000,0000,0000,,Je devais aller quelque part et je ne pouvais pas ralentir pour dire bonjour, tu sais ce que c'est.
+Dialogue: 0,0:17:51.34,0:17:53.69,Default,,0000,0000,0000,,- Je sais ce que c'est en effet... !
+Dialogue: 0,0:17:54.09,0:17:58.12,Default,,0000,0000,0000,,- Ouais... Alors, et si tu venais avec moi du côté de Sweet Apple Acres ?
+Dialogue: 0,0:17:58.12,0:18:01.47,Default,,0000,0000,0000,,- Non merci. Je passe du temps avec mes vrais amis. 
+Dialogue: 0,0:18:01.48,0:18:06.06,Default,,0000,0000,0000,,Pas vrai, Madame la Farine ?N- Oui, c'est correct madame !
+Dialogue: 0,0:18:06.56,0:18:08.34,Default,,0000,0000,0000,,- Euuuh... Pinkie Pie ?
+Dialogue: 0,0:18:08.34,0:18:11.75,Default,,0000,0000,0000,,- Une autre part de gâteau, Sir Lintsalot ?N- Avec plaisir !
+Dialogue: 0,0:18:12.05,0:18:17.66,Default,,0000,0000,0000,,- Oookay. Et qu'est-ce tu dirais de quitter Bizarre City pour se rendre chez Applejack ?
+Dialogue: 0,0:18:17.66,0:18:20.72,Default,,0000,0000,0000,,- Elle n'ira nulle part.N- Je ne bougerai certainement pas.
+Dialogue: 0,0:18:20.72,0:18:23.11,Default,,0000,0000,0000,,Je passe déjà un excellent moment ici !
+Dialogue: 0,0:18:23.84,0:18:25.72,Default,,0000,0000,0000,,- Tu devrais vraiment venir avec moi...
+Dialogue: 0,0:18:25.72,0:18:31.24,Default,,0000,0000,0000,,- Tu as entendue la demoiselle, elle n'ira nulle part, crapule.N- Oh tu m'appelles "crapule", crapule !
+Dialogue: 0,0:18:33.80,0:18:37.20,Default,,0000,0000,0000,,Ca suffit. La fête est finie, viens Pinkie Pie.N- Non !
+Dialogue: 0,0:18:37.20,0:18:40.25,Default,,0000,0000,0000,,- Pinkie Pie, on y va !N- J'ai dit NON !
+Dialogue: 0,0:18:41.42,0:18:45.56,Default,,0000,0000,0000,,- Tu dois... venir avec... moi !
+Dialogue: 0,0:18:45.56,0:18:48.31,Default,,0000,0000,0000,,- Non... je ne... dois pas !
+Dialogue: 0,0:18:53.97,0:18:57.49,Default,,0000,0000,0000,,- Oh tu veux que j'emploie la manière forte ? Alors employons la manière forte.
+Dialogue: 0,0:19:04.58,0:19:06.48,Default,,0000,0000,0000,,On est là !
+Dialogue: 0,0:19:08.51,0:19:10.61,Default,,0000,0000,0000,,SURPRISE !
+Dialogue: 0,0:19:19.19,0:19:21.61,Default,,0000,0000,0000,,Je pensais vraiment qu'elle serait plus excitée...
+Dialogue: 0,0:19:21.61,0:19:24.31,Default,,0000,0000,0000,,- Excitée ? EXCITEE ??
+Dialogue: 0,0:19:24.31,0:19:27.68,Default,,0000,0000,0000,,Pourquoi serais-je excitée de participer à ma Fête d'Adieu ?
+Dialogue: 0,0:19:27.99,0:19:29.78,Default,,0000,0000,0000,,- "Fête d'adieu ?"
+Dialogue: 0,0:19:29.72,0:19:35.11,Default,,0000,0000,0000,,- Oui ! Vous ne m'aimez plus alors vous avez décidé de me jetter du groupe et de célébrer ça avec une grosse fête d'adieu !
+Dialogue: 0,0:19:35.11,0:19:37.40,Default,,0000,0000,0000,,La fête d'adieu à Pinkie Pie !
+Dialogue: 0,0:19:38.96,0:19:42.52,Default,,0000,0000,0000,,- Pourquoi diable penses-tu qu'on ne t'aime plus, sucre d'orge ?
+Dialogue: 0,0:19:42.52,0:19:46.48,Default,,0000,0000,0000,,- Pourquoi ? Pourquoi ?! POURQUOI ?! 
+Dialogue: 0,0:19:47.19,0:19:52.25,Default,,0000,0000,0000,,PARCE QUE VOUS M'AVEZ MENTIE ET EVITÉE TOUTE LA JOURNÉE, VOILA POURQUOI !
+Dialogue: 0,0:19:52.79,0:19:56.90,Default,,0000,0000,0000,,- Euh... ouais, parce que nous voulions que ta fête reste une surprise !
+Dialogue: 0,0:19:56.90,0:20:02.31,Default,,0000,0000,0000,,- On prépare cette fête depuis si longtemps, on se devait de trouver une excuse pour manquer "l'after" de Gummy 
+Dialogue: 0,0:20:02.31,0:20:04.37,Default,,0000,0000,0000,,comme ça on pouvait préparer la tienne !
+Dialogue: 0,0:20:04.37,0:20:11.14,Default,,0000,0000,0000,,- Si c'est une fête d'adieu, pourquoi est-ce le gâteau que j'ai ramené de Sugarcube Corner dit "Joyeux Anniversaire, Pinkie pie !" ?
+Dialogue: 0,0:20:22.13,0:20:24.45,Default,,0000,0000,0000,,Parce que c'est mon anniversaire !
+Dialogue: 0,0:20:24.45,0:20:26.73,Default,,0000,0000,0000,,Oh comment ai-je pu oublier mon propre anniversaire ?
+Dialogue: 0,0:20:30.46,0:20:33.89,Default,,0000,0000,0000,,Et vous m'aimez tellement que vous avez décidé de m'organiser une fête surprise !
+Dialogue: 0,0:20:34.08,0:20:36.81,Default,,0000,0000,0000,,- C'est ce qu'on a essayé de t'expliquer, chérie !
+Dialogue: 0,0:20:36.81,0:20:39.68,Default,,0000,0000,0000,,- Les filles, vous êtes les meilleures amies du monde !
+Dialogue: 0,0:20:40.68,0:20:43.28,Default,,0000,0000,0000,,Comment ai-je pu douter de vous ?
+Dialogue: 0,0:20:43.28,0:20:46.97,Default,,0000,0000,0000,,- Pas de soucis, Pinkie Pie. Ca aurait pu arriver à tout le monde.
+Dialogue: 0,0:20:49.79,0:20:52.73,Default,,0000,0000,0000,,- Je suis contente de ne pas avoir été remplacée par un sceau de navets !
+Dialogue: 0,0:20:52.74,0:20:55.64,Default,,0000,0000,0000,,- Hein ?N- Tu n'as pas envie de savoir.
+Dialogue: 0,0:20:55.64,0:21:00.36,Default,,0000,0000,0000,,- Ok les filles, assez jacassé. NFaisons la fête !
+Dialogue: 0,0:21:06.00,0:21:11.45,Default,,0000,0000,0000,,Chère Princesse Celestia, je vous écris depuis la plus géniale fête qui soit.
+Dialogue: 0,0:21:11.45,0:21:18.14,Default,,0000,0000,0000,,Je ne fais pas que prendre du bon temps avec mes amies, j'ai aussi appris une leçon précieuse sur l'amitié:
+Dialogue: 0,0:21:18.14,0:21:22.72,Default,,0000,0000,0000,,attendez-vous toujours à de bonnes choses de la part de vos amis. Et ne supposez jamais le pire. 
+Dialogue: 0,0:21:22.72,0:21:26.95,Default,,0000,0000,0000,,Soyez assurés qu'un bon ami aura toujours votre bonheur à coeur.
+Dialogue: 0,0:21:26.85,0:21:29.54,Default,,0000,0000,0000,,Votre fidèle étudiante, Twilight Sparkle.
+Dialogue: 0,0:21:29.55,0:21:33.36,Default,,0000,0000,0000,,- Les filles ça ne vous gênerait que nous célébrions "l'after" de Gummy en même temps, si ?
+Dialogue: 0,0:21:33.36,0:21:36.17,Default,,0000,0000,0000,,Sa fête s'est tragiquement écourtée et ça l'a un peu irrité.
+Dialogue: 0,0:21:36.17,0:21:38.67,Default,,0000,0000,0000,,- Oh mon chou.N- Euh... ouais !
+Dialogue: 0,0:21:39.04,0:21:40.72,Default,,0000,0000,0000,,- Faisons la fête pour Gummy. 

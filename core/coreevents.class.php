@@ -26,8 +26,11 @@ class CoreEvents
 	{
 		$autoperform = $this->_main->config->getConfig('Servers.'.Server::getName().'.Autoperform');
 		
-		foreach($autoperform as $action)
-			IRC::send($action);
+		if($autoperform)
+		{
+			foreach($autoperform as $action)
+				IRC::send($action);
+		}
 		
 		$channels = $this->_main->config->getConfig('Servers.'.Server::getName().'.Channels');
 		IRC::joinChannels($channels);

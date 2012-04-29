@@ -29,13 +29,24 @@ class PluginIRCBase extends Plugin
 			$channel = array_shift($args);
 			IRC::message($channel, join(' ', $args));
 		}
-		
+	}
+	
+	public function CommandEmptyBuffer($param, $args)
+	{
+		$members = IRC::getChannelRights($param['channel']);
+		if(in_array($param['nick'], $members['operator']))
+			IRC::emptyBufferMessages($param['channel']);
 	}
 	
 	public function ServerInvite($param)
 	{
+		if(isset($param['additionnal'][0]))
+			$chan = $param['additionnal'][0];
+		else
+			$chan = $param['message'];
+			
 		if($param['channel'] == $this->_main->config->getConfig('Servers.'.Server::getName().'.Nick'))
-			IRC::joinChannel($param['message']);
+			IRC::joinChannel($chan);
 	}
 }
 

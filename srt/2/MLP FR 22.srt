@@ -1,0 +1,1323 @@
+1
+00:00:04,413 --> 00:00:07,558
+Appel à tous les pégases !
+Réunion ce soir !
+
+2
+00:00:14,965 --> 00:00:18,819
+Présence de tous les pégases
+de Ponyville exigée.
+
+3
+00:00:18,969 --> 00:00:22,162
+À la bibliothèque, ce soir.
+T'y es ou t'es un mulet.
+
+4
+00:00:23,427 --> 00:00:24,876
+Sans vouloir te vexer.
+
+5
+00:00:25,026 --> 00:00:26,239
+Y a pas de mal.
+
+6
+00:00:30,606 --> 00:00:33,028
+Allez, entrez, asseyez-vous.
+
+7
+00:00:38,381 --> 00:00:40,048
+Toi aussi, Fluttershy.
+
+8
+00:00:44,405 --> 00:00:45,898
+Allez, on y va.
+
+9
+00:00:50,800 --> 00:00:55,373
+Saison 2 | Épisode 22
+Hurricane Fluttershy
+
+10
+00:00:57,232 --> 00:01:01,069
+Traduction : GrayJeager, Antalolz, Mahlazor54
+Correction et Timing : Milimi
+GrayJeager@gmail.com
+
+11
+00:01:19,371 --> 00:01:23,217
+http://www.youtube.com/user/GrayJeager3
+http://grayjeager.blogspot.fr
+
+12
+00:01:31,008 --> 00:01:36,011
+<i>Chaque chose vivante a besoin d'être
+abreuvée d'une eau de pluie salutaire.</i>
+
+13
+00:01:36,338 --> 00:01:39,942
+<i>Et c'est à Cloudsdale qu'il incombe
+de délivrer des nuages de pluie</i>
+
+14
+00:01:40,092 --> 00:01:41,477
+<i>aux quatre coins d'Équestria.</i>
+
+15
+00:01:41,627 --> 00:01:45,899
+<i>Mais comment, me direz-vous, Cloudsdale
+rassemble-t-elle toute cette eau ?</i>
+
+16
+00:01:46,592 --> 00:01:49,352
+<i>Par le pouvoir de la tornade !
+Absolument !</i>
+
+17
+00:01:49,502 --> 00:01:52,074
+<i>Une tornade engendrée
+par la force pégase.</i>
+
+18
+00:01:52,224 --> 00:01:54,284
+<i>En combinant le pouvoir de leurs ailes,</i>
+
+19
+00:01:54,434 --> 00:01:57,643
+<i>une équipe de pégases
+peut créer une tornade</i>
+
+20
+00:01:57,793 --> 00:02:00,588
+<i>assez puissante pour extirper l'eau
+de son bassin originel</i>
+
+21
+00:02:00,738 --> 00:02:03,380
+<i>et la drainer jusqu'à Cloudsdale.</i>
+
+22
+00:02:03,530 --> 00:02:05,476
+<i>N'oubliez pas, pégases,</i>
+
+23
+00:02:05,626 --> 00:02:09,972
+<i>votre tornade doit atteindre
+un minimum de 800 unités ailoliennes</i>
+
+24
+00:02:10,122 --> 00:02:12,567
+<i>pour pouvoir soulever
+l'eau vers Cloudsdale.</i>
+
+25
+00:02:13,254 --> 00:02:15,685
+<i>Alors, la prochaine fois
+que vous vous demanderez</i>
+
+26
+00:02:15,835 --> 00:02:17,941
+<i>"Mais d'où peut bien venir
+toute cette eau de pluie ?",</i>
+
+27
+00:02:18,091 --> 00:02:19,381
+<i>souvenez-vous...</i>
+
+28
+00:02:24,633 --> 00:02:26,409
+Euh... entracte ?
+
+29
+00:02:27,389 --> 00:02:28,800
+Voilà le topo.
+
+30
+00:02:28,950 --> 00:02:31,533
+Cloudsdale a choisi
+notre réserve montagneuse
+
+31
+00:02:31,683 --> 00:02:34,424
+comme source d'eau de pluie
+pour tout Équestria.
+
+32
+00:02:34,574 --> 00:02:36,206
+Et vous savez ce que ça veut dire.
+
+33
+00:02:36,356 --> 00:02:40,210
+C'est donc aux pégases de Ponyville
+de rapporter l'eau à Cloudsdale.
+
+34
+00:02:41,987 --> 00:02:43,079
+Ce n'est pas tout.
+
+35
+00:02:43,229 --> 00:02:45,382
+Spitfire, capitaine des Wonderbolts,
+
+36
+00:02:45,532 --> 00:02:48,927
+sera là pour assister à l'opération
+et enregistrer notre vitesse maximum.
+
+37
+00:02:49,077 --> 00:02:52,016
+L'année dernière, Fillydelphia
+avait battu le record de vitesse
+
+38
+00:02:52,166 --> 00:02:54,556
+avec une pointe
+à 910 unités ailoliennes.
+
+39
+00:02:54,706 --> 00:02:56,643
+Je pense qu'on peut faire mieux.
+
+40
+00:02:56,793 --> 00:02:59,521
+Je pense qu'on peut dépasser 1000 !
+
+41
+00:03:01,506 --> 00:03:05,402
+Si chacun de nous s'entraîne,
+durement j'entends,
+
+42
+00:03:05,552 --> 00:03:07,527
+pour accroître
+sa puissance ailolienne.
+
+43
+00:03:08,847 --> 00:03:11,992
+J'espère que tu tousses parce que
+tu as avalé de travers, Thunderlane.
+
+44
+00:03:12,142 --> 00:03:13,994
+Personne ne tombera malade avec moi.
+
+45
+00:03:14,144 --> 00:03:16,467
+Est-ce qu'on va s'entraîner dur ?
+
+46
+00:03:16,617 --> 00:03:17,623
+Oui !
+
+47
+00:03:17,963 --> 00:03:19,583
+Est-ce qu'on sera forts ?
+
+48
+00:03:19,733 --> 00:03:20,959
+Oui !
+
+49
+00:03:21,109 --> 00:03:22,461
+Est-ce qu'on sera rapides ?
+
+50
+00:03:22,611 --> 00:03:23,965
+Oui !
+
+51
+00:03:24,613 --> 00:03:26,234
+Super-méga rapides ?
+
+52
+00:03:26,384 --> 00:03:27,549
+Ouais !
+
+53
+00:03:27,699 --> 00:03:29,837
+Qui est avec moi ?
+
+54
+00:03:36,268 --> 00:03:37,445
+Fluttershy !
+
+55
+00:03:41,896 --> 00:03:43,640
+Étire-moi ces gambettes, Flitter !
+
+56
+00:03:43,790 --> 00:03:45,754
+Bonne souplesse, Cloudchaser.
+
+57
+00:03:45,904 --> 00:03:48,349
+Un peu trop de souplesse,
+Blossomforth.
+
+58
+00:03:48,499 --> 00:03:50,614
+Que quelqu'un file
+un coup de sabot à Blossomforth.
+
+59
+00:03:50,764 --> 00:03:53,446
+Je veux te voir galoper plus vite,
+Thunderlane !
+
+60
+00:03:54,373 --> 00:03:56,117
+Bon rythme, Silverspeed !
+
+61
+00:03:58,038 --> 00:03:58,944
+Continuez !
+
+62
+00:03:59,094 --> 00:04:02,084
+Il nous faudra toute l'énergie ailolienne
+disponible pour battre ce record.
+
+63
+00:04:02,234 --> 00:04:03,471
+Ouais !
+
+64
+00:04:04,888 --> 00:04:06,762
+Bel effort, tout le monde !
+
+65
+00:04:07,403 --> 00:04:09,866
+Tout le monde sauf Fluttershy.
+
+66
+00:04:12,376 --> 00:04:14,774
+Fluttershy ? Je sais que t'es là !
+
+67
+00:04:15,080 --> 00:04:17,681
+Tu sèches l'entraînement
+et je veux savoir pourquoi !
+
+68
+00:04:17,831 --> 00:04:19,555
+Fluttershy, ouvre...
+
+69
+00:04:24,560 --> 00:04:26,031
+Salut, Rainbow Dash.
+
+70
+00:04:27,301 --> 00:04:28,777
+Qu'est-ce qu'il t'arrive ?
+
+71
+00:04:28,927 --> 00:04:29,999
+Oh, je...
+
+72
+00:04:30,149 --> 00:04:32,594
+Je crois que j'ai la ponicelle.
+
+73
+00:04:32,744 --> 00:04:36,951
+Je suis désolée, je voulais vraiment
+venir m'entraîner aujourd'hui...
+
+74
+00:04:38,228 --> 00:04:41,005
+Mais cette ponicelle
+m'a vraiment lessivée.
+
+75
+00:04:43,032 --> 00:04:44,722
+Oh, pauvre chou.
+
+76
+00:04:45,264 --> 00:04:48,297
+Tu sais, il n'y a qu'un remède
+à la ponicelle.
+
+77
+00:04:48,447 --> 00:04:50,136
+Je sais, beaucoup de rep...
+
+78
+00:04:51,553 --> 00:04:53,260
+Une douche froide !
+
+79
+00:04:53,410 --> 00:04:56,013
+Et elle disparaît à vue d'il.
+
+80
+00:04:56,538 --> 00:05:00,004
+Tout à coup, je sens que je vais mieux.
+
+81
+00:05:00,483 --> 00:05:02,686
+Je vais enlever
+cette robe de chambre et...
+
+82
+00:05:04,412 --> 00:05:06,392
+Mon aile, aouh, elle est blessée.
+
+83
+00:05:06,542 --> 00:05:08,550
+J'imagine que je ne pourrai pas voler,
+finalement.
+
+84
+00:05:09,468 --> 00:05:10,976
+Aile blessée, hein ?
+
+85
+00:05:13,263 --> 00:05:15,157
+Arrête tes âneries, Fluttershy.
+
+86
+00:05:15,307 --> 00:05:17,159
+On a de l'entraînement sur la planche.
+
+87
+00:05:17,309 --> 00:05:19,055
+Allez, dis-moi ce qui va pas.
+
+88
+00:05:19,633 --> 00:05:20,788
+Ben, tu vois...
+
+89
+00:05:22,379 --> 00:05:24,646
+Rainbow Dash, je ne peux pas !
+
+90
+00:05:24,796 --> 00:05:26,340
+Je ne peux pas voler !
+
+91
+00:05:26,490 --> 00:05:28,003
+Qu'est-ce que tu racontes ?
+
+92
+00:05:28,153 --> 00:05:30,547
+Y a pas une semaine,
+tu nous as fait un piqué dément
+
+93
+00:05:30,697 --> 00:05:33,091
+pour sauver in-extremis un oisillon
+tombé de son nid !
+
+94
+00:05:33,241 --> 00:05:35,649
+Mais c'était différent.
+C'était une urgence !
+
+95
+00:05:35,799 --> 00:05:39,026
+Ce truc de tornade relève plus
+du spectacle.
+
+96
+00:05:39,176 --> 00:05:42,210
+Et tu sais à quel point
+je hais me donner en spectacle.
+
+97
+00:05:42,360 --> 00:05:44,071
+Tu ne te rappelles pas
+du camp de vol ?
+
+98
+00:05:44,221 --> 00:05:46,438
+Je n'arrivais ni à galoper
+ni à voler vite.
+
+99
+00:05:46,588 --> 00:05:49,149
+Pas avec tous ces poneys
+qui me fixaient !
+
+100
+00:05:49,299 --> 00:05:50,845
+C'était pas si terrible que ça.
+
+101
+00:05:50,995 --> 00:05:53,529
+T'as raison, Rainbow Dash,
+c'était pas terrible.
+
+102
+00:05:53,679 --> 00:05:55,209
+<i>C'était épouvantable !</i>
+
+103
+00:06:06,650 --> 00:06:08,540
+<i>Les autres poulains
+se moquaient de moi</i>
+
+104
+00:06:08,690 --> 00:06:09,979
+<i>tout le temps !</i>
+
+105
+00:06:10,129 --> 00:06:12,506
+<i>Fluttershy, Fluttershy,</i>
+
+106
+00:06:12,656 --> 00:06:14,842
+<i>Fluttershy ne sait pas voler.</i>
+
+107
+00:06:17,729 --> 00:06:20,546
+Je ne veux pas revivre
+cette humiliation.
+
+108
+00:06:20,696 --> 00:06:23,976
+Reprends-toi, Fluttershy !
+L'heure n'est pas aux...
+
+109
+00:06:24,502 --> 00:06:27,729
+Ce que je veux dire c'est que,
+confiance ou pas,
+
+110
+00:06:27,879 --> 00:06:31,819
+je vais avoir besoin de tous les pégases
+pour battre le record, toi y compris.
+
+111
+00:06:32,288 --> 00:06:35,195
+J'ai besoin de la moindre
+unité ailolienne disponible.
+
+112
+00:06:36,202 --> 00:06:38,073
+Ça ne va pas être possible,
+Rainbow Dash.
+
+113
+00:06:40,409 --> 00:06:41,619
+Merci quand même.
+
+114
+00:06:45,181 --> 00:06:46,184
+Attends.
+
+115
+00:06:46,652 --> 00:06:47,749
+Je le ferai.
+
+116
+00:06:47,899 --> 00:06:49,489
+- C'est vrai ?
+- Oui.
+
+117
+00:06:49,639 --> 00:06:52,053
+- Partante ?
+- Partante.
+
+118
+00:06:52,571 --> 00:06:53,805
+Super !
+
+119
+00:07:01,640 --> 00:07:03,504
+À quoi sert ce bidule au juste ?
+
+120
+00:07:03,654 --> 00:07:05,275
+C'est un anémomètre.
+
+121
+00:07:05,667 --> 00:07:08,645
+Ça mesure ta vitesse d'accélération
+et la convertit en énergie ailolienne,
+
+122
+00:07:08,795 --> 00:07:12,191
+jaugeant ainsi ton potentiel
+antigravitationnel d'H2O cumulatif.
+
+123
+00:07:12,811 --> 00:07:14,193
+D'autres questions ?
+
+124
+00:07:14,706 --> 00:07:15,723
+Ouais.
+
+125
+00:07:15,873 --> 00:07:17,911
+À quoi sert ce bidule au juste ?
+
+126
+00:07:18,764 --> 00:07:21,742
+Ça te donne ta vitesse de vol
+et la puissance de tes ailes.
+
+127
+00:07:26,602 --> 00:07:28,791
+Est-ce encore toi, Thunderlane ?
+
+128
+00:07:28,941 --> 00:07:32,468
+S'il te plaît, on a besoin
+d'un environnement aseptique.
+
+129
+00:07:32,618 --> 00:07:34,630
+C'était pas moi, c'était Blossomforth.
+
+130
+00:07:34,780 --> 00:07:36,237
+T'en fais pas, Twilight.
+
+131
+00:07:36,387 --> 00:07:39,877
+Thunderlane se cherche une excuse pour
+passer la Journée de la Tornade au lit.
+
+132
+00:07:40,027 --> 00:07:42,096
+Viens donc faire le premier vol d'essai,
+
+133
+00:07:42,246 --> 00:07:43,508
+Thunderlane.
+
+134
+00:07:54,609 --> 00:07:56,693
+On a 9.3 unités ailoliennes.
+
+135
+00:07:56,843 --> 00:07:58,987
+Woah, c'était rapide !
+
+136
+00:07:59,137 --> 00:08:00,222
+Ouais !
+
+137
+00:08:01,390 --> 00:08:02,925
+Pas mal... pas mal.
+
+138
+00:08:22,619 --> 00:08:24,873
+16.5 unités ailoliennes !
+
+139
+00:08:28,469 --> 00:08:29,768
+Maintenant, écoutez !
+
+140
+00:08:29,918 --> 00:08:32,605
+Si vous arrivez à atteindre
+au moins 10.0 unités ailoliennes
+
+141
+00:08:32,755 --> 00:08:34,148
+avant la fin de la semaine,
+
+142
+00:08:34,298 --> 00:08:36,692
+on établira à coup sûr
+un nouveau record de vitesse.
+
+143
+00:08:36,842 --> 00:08:38,216
+On sera numéro un !
+
+144
+00:09:06,276 --> 00:09:08,682
+Impressionnant.
+À ton tour, Fluttershy.
+
+145
+00:09:27,801 --> 00:09:29,870
+<i>Fluttershy, Fluttershy,</i>
+
+146
+00:09:30,020 --> 00:09:31,872
+<i>Fluttershy ne sait pas voler.</i>
+
+147
+00:09:40,989 --> 00:09:42,878
+- Dis-lui !
+- Non, dis-lui toi !
+
+148
+00:09:43,028 --> 00:09:44,131
+Non, toi !
+
+149
+00:09:45,744 --> 00:09:46,998
+Bien joué, Fluttershy !
+
+150
+00:09:47,368 --> 00:09:48,807
+Tu viens de faire...
+
+151
+00:09:49,790 --> 00:09:50,795
+0.5.
+
+152
+00:09:51,654 --> 00:09:53,268
+0.5 ? C'est pas...
+
+153
+00:09:53,829 --> 00:09:55,270
+moins de 1, ça ?
+
+154
+00:09:56,776 --> 00:09:58,555
+<i>Fluttershy, Fluttershy,</i>
+
+155
+00:09:58,705 --> 00:10:00,847
+<i>Flutteshy ne sait pas voler.</i>
+
+156
+00:10:09,989 --> 00:10:11,620
+Fluttershy, attends !
+
+157
+00:10:11,770 --> 00:10:15,647
+Quelques andouilles t'ont taquinée
+et tu fais un blocage, quel drame !
+
+158
+00:10:15,797 --> 00:10:18,187
+Tu vas pas abandonner juste pour ça,
+quand même ?
+
+159
+00:10:19,029 --> 00:10:20,329
+Si !
+
+160
+00:10:22,589 --> 00:10:24,133
+Mais j'ai besoin de toi !
+
+161
+00:10:24,283 --> 00:10:26,485
+Je suis désolée, Rainbow Dash,
+
+162
+00:10:26,635 --> 00:10:29,041
+mais je n'en ai pas la force, là...
+
+163
+00:10:55,897 --> 00:10:58,292
+Merci mais j'ai bien peur
+que quelques glands
+
+164
+00:10:58,442 --> 00:11:00,836
+ne puissent résoudre
+mon problème d'envol.
+
+165
+00:11:02,938 --> 00:11:06,717
+J'ai essayé, mais tu aurais dû voir
+tous ces poneys se moquer de moi...
+
+166
+00:11:08,489 --> 00:11:11,541
+Je sais que c'est important
+d'avoir confiance en moi...
+
+167
+00:11:13,537 --> 00:11:14,558
+Oui, oui.
+
+168
+00:11:14,708 --> 00:11:17,144
+Je m'en souviens.
+La rivière était en crue...
+
+169
+00:11:18,963 --> 00:11:20,369
+et tu étais effrayé.
+
+170
+00:11:21,456 --> 00:11:22,274
+Oui.
+
+171
+00:11:22,424 --> 00:11:24,595
+Je t'ai bien dit
+de ne jamais abandonner,
+
+172
+00:11:26,079 --> 00:11:27,863
+et de croire en toi.
+
+173
+00:11:29,295 --> 00:11:31,950
+Vous avez raison, les amis.
+Je ne devrais pas abandonner.
+
+174
+00:11:32,100 --> 00:11:33,494
+Je vais prendre confiance en moi,
+
+175
+00:11:33,644 --> 00:11:36,164
+et leur montrer à tous que
+je suis une bonne voltigeuse.
+
+176
+00:11:38,650 --> 00:11:40,850
+Une grande voltigeuse !
+
+177
+00:13:02,441 --> 00:13:05,234
+C'est superbe, Flitter.
+Bien mieux qu'hier.
+
+178
+00:13:05,384 --> 00:13:09,089
+Ça déchire ! On va exploser ce record !
+
+179
+00:13:10,922 --> 00:13:11,923
+Il dit quoi ?
+
+180
+00:13:12,073 --> 00:13:13,800
+J'ai l'air de parler l'écureuil ?
+
+181
+00:13:14,530 --> 00:13:15,980
+Qu'est-ce que c'est ?
+
+182
+00:13:35,023 --> 00:13:36,025
+2.3 ?
+
+183
+00:13:36,600 --> 00:13:38,786
+Deux point trois ?
+
+184
+00:13:38,936 --> 00:13:40,693
+Ça doit être une erreur !
+
+185
+00:13:40,843 --> 00:13:42,873
+J'ai travaillé si dur !
+
+186
+00:13:43,982 --> 00:13:45,743
+C'est un progrès énorme !
+
+187
+00:13:45,893 --> 00:13:48,458
+Tu as été géniale, Fluttershy.
+
+188
+00:13:48,608 --> 00:13:49,808
+Non.
+
+189
+00:13:49,958 --> 00:13:51,949
+Je pensais avoir vaincu mon trac,
+
+190
+00:13:52,099 --> 00:13:53,943
+mais il a finalement eu raison de moi !
+
+191
+00:13:54,093 --> 00:13:57,323
+Je n'atteindrai jamais 10.0
+unités ailoliennes avant demain !
+
+192
+00:13:57,473 --> 00:13:59,494
+Alors ça n'arrivera pas.
+
+193
+00:13:59,644 --> 00:14:01,308
+Mais chaque petit point compte !
+
+194
+00:14:01,458 --> 00:14:04,494
+Comment te sentirais-tu si tout le monde
+volait avec une puissance 10.0 unités
+
+195
+00:14:04,644 --> 00:14:07,481
+et toi seulement 2.5 ?
+
+196
+00:14:08,179 --> 00:14:09,900
+En fait, c'était seulement 2.3 et...
+
+197
+00:14:12,427 --> 00:14:15,311
+Eh bien...
+J'imagine que je me sentirais...
+
+198
+00:14:15,461 --> 00:14:18,776
+Exactement ! Humiliée !
+
+199
+00:14:18,926 --> 00:14:22,223
+Je suis désolée, Rainbow Dash,
+je ne peux pas !
+
+200
+00:14:23,397 --> 00:14:24,587
+Ça ira.
+
+201
+00:14:24,737 --> 00:14:26,779
+T'as plus d'énergie que nécessaire
+pour ta tornade.
+
+202
+00:14:26,929 --> 00:14:29,743
+Tu feras s'élever des tonnes d'eau
+vers Cloudsdale !
+
+203
+00:14:31,571 --> 00:14:35,224
+Si seulement on pouvait faire s'élever
+la confiance de Fluttershy...
+
+204
+00:14:50,340 --> 00:14:52,005
+Est-ce que vous êtes parés ?
+
+205
+00:14:57,230 --> 00:14:58,157
+Regarde !
+
+206
+00:14:59,515 --> 00:15:01,243
+Ce fainéant de Thunderlane !
+
+207
+00:15:01,393 --> 00:15:02,251
+Où il est ?
+
+208
+00:15:02,401 --> 00:15:06,248
+Depuis le début, il essaye d'esquiver
+avec sa fausse toux et tout.
+
+209
+00:15:06,398 --> 00:15:08,287
+Rumble, où est ton flemmard de frère ?
+
+210
+00:15:08,437 --> 00:15:11,753
+Il a le rhume des plumes.
+Il est à l'hôpital de Ponyville.
+
+211
+00:15:11,996 --> 00:15:13,696
+Et il n'est pas le seul.
+
+212
+00:15:17,109 --> 00:15:20,804
+Voyons, sans ces huit pégases
+atteints du rhume des plumes...
+
+213
+00:15:20,954 --> 00:15:21,896
+Oh non !
+
+214
+00:15:22,046 --> 00:15:24,665
+Ne me dis pas qu'on ne va pas
+pouvoir battre le record ?
+
+215
+00:15:24,815 --> 00:15:25,801
+Non...
+
+216
+00:15:27,545 --> 00:15:29,146
+Vous pourriez ne pas être capables
+
+217
+00:15:29,296 --> 00:15:31,148
+de créer une tornade assez puissante
+
+218
+00:15:31,298 --> 00:15:33,150
+pour rapporter l'eau à Cloudsdale !
+
+219
+00:15:33,300 --> 00:15:35,903
+Alors, est-ce qu'on remballe ?
+
+220
+00:15:40,679 --> 00:15:41,533
+Non.
+
+221
+00:15:41,683 --> 00:15:43,577
+Bien sûr que non.
+Oubliez le record.
+
+222
+00:15:43,867 --> 00:15:46,205
+Cloudsdale a toujours besoin d'eau !
+
+223
+00:15:46,548 --> 00:15:49,458
+Très bien, tout le monde.
+Donnons tout ce que nous avons.
+
+224
+00:15:50,532 --> 00:15:52,920
+On décolle au son du cor !
+
+225
+00:16:08,623 --> 00:16:10,858
+Tu crois qu'ils atteindront
+800 unités ailoliennes ?
+
+226
+00:16:11,008 --> 00:16:12,314
+Je l'espère !
+
+227
+00:16:12,619 --> 00:16:14,233
+150 unités ailoliennes.
+
+228
+00:16:14,383 --> 00:16:16,276
+250 unités ailoliennes.
+
+229
+00:16:18,916 --> 00:16:20,489
+500 unités ailoliennes !
+
+230
+00:16:23,195 --> 00:16:25,628
+750 unités ailoliennes !
+
+231
+00:16:26,252 --> 00:16:27,287
+Twilight !
+
+232
+00:16:27,437 --> 00:16:30,707
+Fluttershy ! Que fais-tu là ?!
+
+233
+00:16:31,613 --> 00:16:34,568
+Je me suis dit que si je ne pouvais pas
+aider Rainbow Dash avec la tornade,
+
+234
+00:16:34,718 --> 00:16:37,506
+le moins que je puisse faire était
+de lui apporter un soutien moral !
+
+235
+00:16:37,656 --> 00:16:42,212
+Elle en aura besoin, sachant que
+huit pégases ont le rhume des plumes.
+
+236
+00:16:42,362 --> 00:16:44,805
+Oh non ! Quelle terrible nouvelle !
+
+237
+00:17:06,015 --> 00:17:07,323
+Est-ce que tu vas bien ?
+
+238
+00:17:08,086 --> 00:17:09,165
+Je vais bien !
+
+239
+00:17:10,022 --> 00:17:13,075
+Tu étais si proche
+des 800 unités requises !
+
+240
+00:17:13,225 --> 00:17:15,199
+Je suis désolée, Rainbow Dash.
+
+241
+00:17:17,029 --> 00:17:19,042
+On doit réessayer !
+
+242
+00:17:19,192 --> 00:17:21,472
+Ton équipe a déjà donné
+tout ce qu'elle avait !
+
+243
+00:17:22,061 --> 00:17:24,688
+Si la formation se brise encore,
+quelqu'un pourrait se blesser !
+
+244
+00:17:24,838 --> 00:17:27,055
+Tu devrais arrêter, c'est dangereux !
+
+245
+00:17:27,205 --> 00:17:29,141
+Non ! Encore une fois !
+
+246
+00:17:29,291 --> 00:17:31,185
+Je veux m'assurer
+qu'on a bien tout donné !
+
+247
+00:17:31,335 --> 00:17:34,549
+Si je dois échouer,
+je veux que ce soit en volant.
+
+248
+00:17:35,631 --> 00:17:38,202
+Allez, on a une mission à remplir !
+
+249
+00:17:38,352 --> 00:17:39,320
+Ouais !
+
+250
+00:17:49,856 --> 00:17:51,347
+OK, c'est parti...
+
+251
+00:17:51,848 --> 00:17:53,749
+100 unités ailoliennes !
+
+252
+00:17:54,541 --> 00:17:55,609
+200...
+
+253
+00:17:56,242 --> 00:17:57,127
+500 !
+
+254
+00:17:57,736 --> 00:17:59,546
+Gardez la formation !
+
+255
+00:17:59,905 --> 00:18:02,370
+Bats-moi ces ailes ! Plus vite !
+
+256
+00:18:03,013 --> 00:18:04,136
+700 !
+
+257
+00:18:07,412 --> 00:18:10,015
+750 unités ailoliennes !
+
+258
+00:18:12,501 --> 00:18:14,978
+C'est à ce moment là, que la formation
+s'est brisée tout à l'heure !
+
+259
+00:18:15,128 --> 00:18:17,168
+Je suis trop nerveuse pour regarder !
+
+260
+00:18:18,557 --> 00:18:21,527
+Allez ! Encore un petit effort !
+
+261
+00:18:21,677 --> 00:18:24,571
+Je peux voir l'eau essayer de monter !
+
+262
+00:18:24,721 --> 00:18:26,041
+795 !
+
+263
+00:18:26,390 --> 00:18:27,866
+On est tous proches !
+
+264
+00:18:28,016 --> 00:18:30,452
+Fluttershy, ils ont besoin de toi,
+là-haut !
+
+265
+00:18:30,602 --> 00:18:32,996
+Je ne ferai pas la différence !
+
+266
+00:18:33,146 --> 00:18:35,332
+Tu peux faire la différence !
+
+267
+00:18:35,482 --> 00:18:38,165
+Mon tout petit 2.3 unités ailoliennes
+
+268
+00:18:38,315 --> 00:18:40,509
+ne sera pas suffisant !
+
+269
+00:18:40,659 --> 00:18:42,714
+Ça coince à 795 !
+
+270
+00:18:42,864 --> 00:18:44,550
+J'ai peur qu'ils aient tout donné.
+
+271
+00:18:44,700 --> 00:18:47,970
+Fais-le pour Équestria !
+Fais-le pour Rainbow Dash !
+
+272
+00:18:48,120 --> 00:18:49,642
+Fais-le pour toi !
+
+273
+00:19:17,861 --> 00:19:18,876
+Ça bouge !
+
+274
+00:19:19,026 --> 00:19:20,199
+Elle y arrive !
+
+275
+00:19:23,737 --> 00:19:24,833
+798 !
+
+276
+00:19:24,983 --> 00:19:27,926
+Elle vient de dépasser
+son record personnel !
+
+277
+00:19:33,916 --> 00:19:35,936
+<i>Fluttershy, Fluttershy,</i>
+
+278
+00:19:36,086 --> 00:19:38,336
+<i>Flutteshy ne sait pas voler.</i>
+
+279
+00:19:39,997 --> 00:19:41,057
+Non !
+
+280
+00:19:42,683 --> 00:19:43,901
+C'était quoi ?
+
+281
+00:19:44,051 --> 00:19:46,028
+Je crois que c'était Fluttershy !
+
+282
+00:19:59,939 --> 00:20:03,820
+Elle l'a fait ! Elle l'a fait !
+Ils y sont arrivés !
+
+283
+00:20:29,805 --> 00:20:31,504
+Wow, attention, doucement !
+
+284
+00:20:31,654 --> 00:20:34,523
+Hein, quoi ?
+Est-ce qu'on y est arrivé ?
+
+285
+00:20:34,673 --> 00:20:37,393
+Ouais, on a réussi !
+Tu as réussi !
+
+286
+00:20:41,366 --> 00:20:44,044
+Excellent travail, Fluttershy,
+c'était génial !
+
+287
+00:20:44,194 --> 00:20:46,461
+Ouais, on y serait pas arrivé sans toi.
+
+288
+00:20:46,611 --> 00:20:48,076
+Beau travail, Rainbow Dash.
+
+289
+00:20:48,226 --> 00:20:51,343
+T'as peut-être pas établi de nouveau record,
+mais tu as montré beaucoup de cran.
+
+290
+00:20:51,761 --> 00:20:52,763
+Merci.
+
+291
+00:20:52,913 --> 00:20:54,805
+Mais niveau cran,
+
+292
+00:20:54,955 --> 00:20:58,267
+je ne suis rien comparée
+à ma voltigeuse numéro un, Fluttershy.
+
+293
+00:20:59,375 --> 00:21:01,645
+Félicitons Fluttershy !
+
+294
+00:21:01,795 --> 00:21:04,231
+Fluttershy, Fluttershy,
+
+295
+00:21:04,381 --> 00:21:06,775
+Flutteshy sait vraiment voler.
+
+296
+00:21:09,437 --> 00:21:11,338
+<i>Chère Princesse Célestia,</i>
+
+297
+00:21:11,488 --> 00:21:13,976
+<i>Quelques fois, on peut penser
+que ce qu'on a à donner</i>
+
+298
+00:21:14,126 --> 00:21:16,210
+<i>n'est pas assez
+pour faire la différence.</i>
+
+299
+00:21:16,360 --> 00:21:20,289
+<i>Mais aujourd'hui, j'ai appris que
+chacun avait son importance.</i>
+
+300
+00:21:20,439 --> 00:21:21,832
+<i>Même les plus petits.</i>
+
+301
+00:21:21,982 --> 00:21:25,335
+<i>Si on garde la tête haute,
+qu'on fait de notre mieux</i>
+
+302
+00:21:25,485 --> 00:21:27,219
+<i>et qu'on croit en soi,</i>
+
+303
+00:21:27,369 --> 00:21:29,260
+<i>rien n'est impossible.</i>
+
