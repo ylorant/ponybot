@@ -104,7 +104,7 @@ class PluginMembers extends Plugin
 			IRC::message($cmd['channel'], "Non-existent member.");
 		else
 		{
-			$oldgroup = $this->members['Members'][$name]['group'];
+			$oldgroup = $this->members['Members'][Server::getName()][$name]['group'];
 			if($this->setGroup($this->members['Members'][$name]['host'], $msg[1]))
 			{
 				IRC::userMode($msg[0], '-'.$this->members['Groups'][$oldgroup]);
@@ -119,7 +119,7 @@ class PluginMembers extends Plugin
 		$nick = preg_replace("/[^a-zA-Z0-9]/", '', $nick);
 		if(!in_array($host, $this->getMembersUsers()))
 		{
-			$this->members['Members'][$nick] = array('host' => $host, 'group' => $group);
+			$this->members['Members'][Server::getName()][$nick] = array('host' => $host, 'group' => $group);
 			$this->saveMembersFile($this->config['File']);
 			return TRUE;
 		}
@@ -145,7 +145,7 @@ class PluginMembers extends Plugin
 		if(isset($this->members['Groups'][$group]))
 		{
 			unset($this->members['Groups'][$group]);
-			foreach($this->members['Members'] as &$m)
+			foreach($this->members['Members'][Server::getName()] as &$m)
 			{
 				if($m['group'] == $group)
 					$m['group'] = 'members';
@@ -162,7 +162,7 @@ class PluginMembers extends Plugin
 		if(!isset($this->members['Groups'][$group]))
 			return FALSE;
 		
-		foreach($this->members['Members'] as &$m)
+		foreach($this->members['Members'][Server::getName()] as &$m)
 		{
 			if($m['host'] == $host)
 			{
@@ -177,11 +177,11 @@ class PluginMembers extends Plugin
 	
 	public function deleteMember($host)
 	{
-		foreach($this->members['Members'] as $k => $m)
+		foreach($this->members['Members'][Server::getName()] as $k => $m)
 		{
 			if($m['host'] == $host)
 			{
-				unset($this->members['Members'][$k]);
+				unset($this->members['Members'][Server::getName()][$k]);
 				$this->saveMembersFile($this->config['File']);
 				return TRUE;
 			}
@@ -192,7 +192,7 @@ class PluginMembers extends Plugin
 	
 	public function getMember($host)
 	{
-		foreach($this->members['Members'] as $m)
+		foreach($this->members['Members'][Server::getName()] as $m)
 		{
 			if($m['host'] == $host)
 				return $m;
@@ -203,7 +203,7 @@ class PluginMembers extends Plugin
 	
 	public function getMemberName($host)
 	{
-		foreach($this->members['Members'] as $k => $m)
+		foreach($this->members['Members'][Server::getName()] as $k => $m)
 		{
 			if($m['host'] == $host)
 				return $k;
@@ -215,7 +215,7 @@ class PluginMembers extends Plugin
 	public function getMembers()
 	{
 		$users = array();
-		foreach($this->members['Members'] as $u)
+		foreach($this->members['Members'][Server::getName()] as $u)
 			$users[] = $u['nick'];
 		
 		return $users;
@@ -224,7 +224,11 @@ class PluginMembers extends Plugin
 	public function getMembersUsers($group = NULL)
 	{
 		$users = array();
-		foreach($this->members['Members'] as $u)
+		
+		if(!isset($this->members['Members'][Server::getName()]))
+			$this->members['Members'][Server::getName()] = array();
+		
+		foreach($this->members['Members'][Server::getName()] as $u)
 		{
 			if($group == NULL || $u['group'] == $group)
 				$users[] = $u['host'];
