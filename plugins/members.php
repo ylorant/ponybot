@@ -105,7 +105,7 @@ class PluginMembers extends Plugin
 		else
 		{
 			$oldgroup = $this->members['Members'][Server::getName()][$name]['group'];
-			if($this->setGroup($this->members['Members'][$name]['host'], $msg[1]))
+			if($this->setGroup($this->members['Members'][Server::getName()][$name]['host'], $msg[1]))
 			{
 				IRC::userMode($msg[0], '-'.$this->members['Groups'][$oldgroup]);
 				IRC::userMode($msg[0], '+'.$this->members['Groups'][$msg[1]]);
