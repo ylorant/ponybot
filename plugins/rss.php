@@ -10,6 +10,11 @@ class PluginRSS extends Plugin
 		$this->_plugins->changeRoutineTimeInterval($this, 'RoutineCheckRSS', 30);
 	}
 	
+	public function CommandCheckRSS()
+	{
+		$this->RoutineCheckRSS();
+	}
+	
 	public function RoutineCheckRSS()
 	{
 		Ponybot::message('Checking RSS...');
