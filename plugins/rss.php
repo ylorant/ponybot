@@ -20,7 +20,7 @@ class PluginRSS extends Plugin
 		Ponybot::message('Checking RSS...');
 		foreach($this->rss as $name => $el)
 		{
-			if(!$contents = @file_get_contents($el['href']))
+			if(!$contents = file_get_contents($el['href']))
 				continue;
 			
 			$news = $this->readRSS($contents, $el['last']);
