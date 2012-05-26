@@ -26,6 +26,8 @@ class PluginRSS extends Plugin
 				continue;
 			}
 			
+			Ponybot::message("Received RSS data.");
+			
 			$news = $this->readRSS($contents, $el['last']);
 			if(count($news) > 0)
 			{
