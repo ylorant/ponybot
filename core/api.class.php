@@ -76,6 +76,12 @@ class ServerList
 	public static function get($name)
 	{
 		$self = self::getInstance();
-		return isset($self->_main->servers[$name]) ? $self->_main->servers[$name] : NULL;
+		return isset($self->_main->servers[$name]) ? $self->_main->servers[$name]->getIRC() : NULL;
+	}
+	
+	public static function exists($name)
+	{
+		$self = self::getInstance();
+		return isset($self->_main->servers[$name]);
 	}
 }

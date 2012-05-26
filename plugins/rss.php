@@ -44,7 +44,11 @@ class PluginRSS extends Plugin
 						$shortened = $n['href'];
 					
 					foreach($el['channels'] as $channel)
-						IRC::message($channel, '['.$name.'] '.$n['title'].' - '.$shortened);
+					{
+						$channel = explode('/', $channel);
+						if(ServerList::exists($channel[0]))
+							ServerList::get($channel[0])->message($channel[1], '['.$name.'] '.$n['title'].' - '.$shortened);
+					}
 					
 					$time = $time < $n['time'] ? $n['time'] : $time;
 				}
