@@ -21,7 +21,10 @@ class PluginRSS extends Plugin
 		foreach($this->rss as $name => $el)
 		{
 			if(!$contents = file_get_contents($el['href']))
+			{
+				Ponybot::message("Cannot receive RSS for ".$name);
 				continue;
+			}
 			
 			$news = $this->readRSS($contents, $el['last']);
 			if(count($news) > 0)
