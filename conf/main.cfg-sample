@@ -20,6 +20,7 @@ Outfile=irc.out
 
 [Plugin.Rss]
 File=conf/rss.ini
+Shorten=false
 
 [Plugin.Members]
 File=conf/members.ini

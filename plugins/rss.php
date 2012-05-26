@@ -24,9 +24,14 @@ class PluginRSS extends Plugin
 				$time = 0;
 				foreach($news as $n)
 				{
-					$curl = curl_init("http://koinko.in/yourls-api.php?signature=0f1b869a61&action=shorturl&url=".$n['href']."&format=simple");
-					curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
-					$shortened = curl_exec($curl);
+					if(isset($this->config['Shorten']) && Ponybot::parseBool($this->config['Shorten']))
+					{
+						$curl = curl_init("http://koinko.in/yourls-api.php?signature=0f1b869a61&action=shorturl&url=".$n['href']."&format=simple");
+						curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
+						$shortened = curl_exec($curl);
+					}
+					else
+						$shortened = $n['href'];
 					
 					foreach($el['channels'] as $channel)
 						IRC::message($channel, '['.$name.'] '.$n['title'].' - '.$shortened);
