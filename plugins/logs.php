@@ -39,7 +39,7 @@ class PluginLogs extends Plugin
 			{
 			
 				if(!is_dir($this->config['BaseDir'].'/'.$server))
-					mkdir(($this->config['BaseDir'].'/'.$server);
+					mkdir($this->config['BaseDir'].'/'.$server);
 				
 				$this->logfiles[$server.'.'.$cmd['channel']] = fopen($this->config['BaseDir'].'/'.$server.'/'.$cmd['channel'].'.log', 'a+'); 
 			}
