@@ -49,7 +49,7 @@ class PluginLogs extends Plugin
 				$this->logfiles[$server.'.'.$cmd['channel']] = fopen($this->config['BaseDir'].'/'.$server.'/'.$cmd['channel'].'.log', 'a+'); 
 			}
 		
-			fputs($this->logfiles[$sever.'.'.$cmd['channel']], '--> '.$cmd['nick'].' ('.$cmd['user'].') joined the channel.'."\n");
+			fputs($this->logfiles[$server.'.'.$cmd['channel']], '--> '.$cmd['nick'].' ('.$cmd['user'].') joined the channel.'."\n");
 		}
 	}
 	
@@ -59,7 +59,7 @@ class PluginLogs extends Plugin
 		
 		if($this->banlistCheck($server, $cmd['channel']))
 		{
-			fputs($this->logfiles[$sever.'.'.$cmd['channel']], '<-- '.$cmd['nick'].' ('.$cmd['user'].') left the channel.'."\n");
+			fputs($this->logfiles[$server.'.'.$cmd['channel']], '<-- '.$cmd['nick'].' ('.$cmd['user'].') left the channel.'."\n");
 		
 			if($cmd['nick'] == $this->_main->config->getConfig('Servers.'.$server.'.Nick'))
 				fclose($this->logfiles[$server.'.'.$cmd['channel']]);
@@ -72,7 +72,7 @@ class PluginLogs extends Plugin
 		
 		if($this->banlistCheck($server, $cmd['channel']))
 		{
-			fputs($this->logfiles[$sever.'.'.$cmd['channel']], '<-- '.$cmd['nick'].' ('.$cmd['user'].') was kicked from the channel.'."\n");
+			fputs($this->logfiles[$server.'.'.$cmd['channel']], '<-- '.$cmd['nick'].' ('.$cmd['user'].') was kicked from the channel.'."\n");
 		
 			if($cmd['nick'] == $this->_main->config->getConfig('Servers.'.$server.'.Nick'))
 				fclose($this->logfiles[$server.'.'.$cmd['channel']]);
@@ -84,13 +84,13 @@ class PluginLogs extends Plugin
 		$server = Server::getName();
 		
 		if($this->banlistCheck($server, $cmd['channel']))
-			fputs($this->logfiles[$sever.'.'.$cmd['channel']], '<-- '.$cmd['nick'].' set mode ['.join(' ', $cmd['additionnal']).'].'."\n");
+			fputs($this->logfiles[$server.'.'.$cmd['channel']], '<-- '.$cmd['nick'].' set mode ['.join(' ', $cmd['additionnal']).'].'."\n");
 	}
 	
 	public function ServerPrivmsg($cmd)
 	{
 		if($this->banlistCheck($server, $cmd['channel']))
-			fputs($this->logfiles[$sever.'.'.$cmd['channel']], '<'.$cmd['nick'].'> '.$cmd['message']."\n");
+			fputs($this->logfiles[$server.'.'.$cmd['channel']], '<'.$cmd['nick'].'> '.$cmd['message']."\n");
 	}
 	
 	private function banlistCheck($server, $channel)
