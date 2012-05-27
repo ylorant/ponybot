@@ -18,7 +18,7 @@ class PluginLogs extends Plugin
 			$this->config['Blacklist'] = explode(',', $this->config['Blacklist']);
 		
 		if(!is_dir($this->config['BaseDir'].'/'.$server))
-			mkdir(($this->config['BaseDir'].'/'.$server);
+			mkdir($this->config['BaseDir'].'/'.$server);
 				
 		 
 	}
