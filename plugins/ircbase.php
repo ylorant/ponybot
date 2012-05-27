@@ -40,7 +40,7 @@ class PluginIRCBase extends Plugin
 	
 	public function ServerInvite($param)
 	{
-		if(isset($param['additionnal'][0]))
+		if(!empty($param['additionnal'][0]))
 			$chan = $param['additionnal'][0];
 		else
 			$chan = $param['message'];
