@@ -41,7 +41,7 @@ class PluginLogs extends Plugin
 		{
 			if($cmd['nick'] == $this->_main->config->getConfig('Servers.'.$server.'.Nick'))
 			{
-				Ponybot::message("Creating log file for ".$msg['channel']);
+				Ponybot::message("Creating log file for ".$cmd['channel']);
 				if(!is_dir($this->config['BaseDir'].'/'.$server))
 					mkdir($this->config['BaseDir'].'/'.$server);
 				
