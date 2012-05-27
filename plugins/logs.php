@@ -44,7 +44,7 @@ class PluginLogs extends Plugin
 				$this->logfiles[$server.'.'.$cmd['channel']] = fopen($this->config['BaseDir'].'/'.$server.'/'.$cmd['channel'].'.log', 'a+'); 
 			}
 		
-			fputs($this->logfiles[$sever.'.'$cmd['channel']], '--> '.$cmd['nick'].' ('.$cmd['user'].') joined the channel.');
+			fputs($this->logfiles[$sever.'.'.$cmd['channel']], '--> '.$cmd['nick'].' ('.$cmd['user'].') joined the channel.');
 		}
 	}
 	
@@ -54,7 +54,7 @@ class PluginLogs extends Plugin
 		
 		if($this->banlistCheck($server, $cmd['channel'])
 		{
-			fputs($this->logfiles[$sever.'.'$cmd['channel']], '<-- '.$cmd['nick'].' ('.$cmd['user'].') left the channel.');
+			fputs($this->logfiles[$sever.'.'.$cmd['channel']], '<-- '.$cmd['nick'].' ('.$cmd['user'].') left the channel.');
 		
 			if($cmd['nick'] == $this->_main->config->getConfig('Servers.'.$server.'.Nick'))
 				fclose($this->logfiles[$server.'.'.$cmd['channel']]);
@@ -79,13 +79,13 @@ class PluginLogs extends Plugin
 		$server = Server::getName();
 		
 		if($this->banlistCheck($server, $cmd['channel'])
-			fputs($this->logfiles[$sever.'.'$cmd['channel']], '<-- '.$cmd['nick'].' set mode ['.join(' ', $cmd['additionnal']).'].');
+			fputs($this->logfiles[$sever.'.'.$cmd['channel']], '<-- '.$cmd['nick'].' set mode ['.join(' ', $cmd['additionnal']).'].');
 	}
 	
 	public function ServerPrivmsg($cmd)
 	{
 		if($this->banlistCheck($server, $cmd['channel'])
-			fputs($this->logfiles[$sever.'.'$cmd['channel']], '<>'.$cmd['nick'].' set mode ['.join(' ', $cmd['additionnal']).'].');
+			fputs($this->logfiles[$sever.'.'.$cmd['channel']], '<>'.$cmd['nick'].' set mode ['.join(' ', $cmd['additionnal']).'].');
 	}
 	
 	private function banlistCheck($server, $channel)
