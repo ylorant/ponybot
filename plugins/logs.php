@@ -36,6 +36,7 @@ class PluginLogs extends Plugin
 	
 	public function ServerJoin($cmd)
 	{
+		Ponybot::message("JOINED CANAL");
 		$server = Server::getName();
 		if($this->banlistCheck($server, $cmd['channel']))
 		{
