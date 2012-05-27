@@ -24,11 +24,13 @@ class PluginLogs extends Plugin
 	
 	public function Server001()
 	{
-		if(!is_dir($this->config['BaseDir'].'/'.$server))
-			mkdir($this->config['BaseDir'].'/'.$server);
 		
 		$server = Server::getName();
 		$nick = $this->_main->config->getConfig('Servers.'.$server.'.Nick');
+		
+		if(!is_dir($this->config['BaseDir'].'/'.$server))
+			mkdir($this->config['BaseDir'].'/'.$server);
+		
 		$this->logfiles[$server.'.'.$nick] = fopen($this->config['BaseDir'].'/'.$server.'/'.$nick.'.log', 'a+');
 	}
 	
