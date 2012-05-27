@@ -67,7 +67,7 @@ class PluginLogs extends Plugin
 		
 		if($this->banlistCheck($server, $cmd['channel']))
 		{
-			fputs($this->logfiles[$sever.'.'$cmd['channel']], '<-- '.$cmd['nick'].' ('.$cmd['user'].') was kicked from the channel.');
+			fputs($this->logfiles[$sever.'.'.$cmd['channel']], '<-- '.$cmd['nick'].' ('.$cmd['user'].') was kicked from the channel.');
 		
 			if($cmd['nick'] == $this->_main->config->getConfig('Servers.'.$server.'.Nick'))
 				fclose($this->logfiles[$server.'.'.$cmd['channel']]);
