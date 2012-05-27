@@ -95,7 +95,7 @@ class PluginLogs extends Plugin
 	
 	private function banlistCheck($server, $channel)
 	{
-		if((isset($this->config['Whitelist']) && in_array($server.'/'.$channel, $this->config['Whitelist'])) || (isset($this->config['Blacklist']) && !in_array($server.'/'.$channel, $this->config['Blacklist'])))
+		if((!isset($this->config['Whitelist']) || in_array($server.'/'.$channel, $this->config['Whitelist'])) && (!isset($this->config['Blacklist']) || !in_array($server.'/'.$channel, $this->config['Blacklist'])))
 			return TRUE;
 		
 		return FALSE;
