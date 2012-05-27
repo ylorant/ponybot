@@ -17,14 +17,16 @@ class PluginLogs extends Plugin
 		if(isset($this->config['Blacklist']))
 			$this->config['Blacklist'] = explode(',', $this->config['Blacklist']);
 		
-		if(!is_dir($this->config['BaseDir'].'/'.$server))
-			mkdir($this->config['BaseDir'].'/'.$server);
+		
 				
 		 
 	}
 	
 	public function Server001()
 	{
+		if(!is_dir($this->config['BaseDir'].'/'.$server))
+			mkdir($this->config['BaseDir'].'/'.$server);
+		
 		$server = Server::getName();
 		$nick = $this->_main->config->getConfig('Servers.'.$server.'.Nick');
 		$this->logfiles[$server.'.'.$nick] = fopen($this->config['BaseDir'].'/'.$server.'/'.$nick.'.log', 'a+');
