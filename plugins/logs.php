@@ -43,15 +43,14 @@ class PluginLogs extends Plugin
 		else
 			$channel = $cmd['message'];
 		
-		if($this->banlistCheck($server, $cmd['channel']))
+		if($this->banlistCheck($server, $channel))
 		{
 			if($cmd['nick'] == $this->_main->config->getConfig('Servers.'.$server.'.Nick'))
 			{
-				Ponybot::message("Creating log file for ".$channel);
 				if(!is_dir($this->config['BaseDir'].'/'.$server))
 					mkdir($this->config['BaseDir'].'/'.$server);
 				
-				$this->logfiles[$server.'.'.$cmd['channel']] = fopen($this->config['BaseDir'].'/'.$server.'/'.$channel.'.log', 'a+'); 
+				$this->logfiles[$server.'.'.$channel] = fopen($this->config['BaseDir'].'/'.$server.'/'.$channel.'.log', 'a+'); 
 			}
 		
 			fputs($this->logfiles[$server.'.'.$channel], '--> '.$cmd['nick'].' ('.$cmd['user'].') joined the channel.'."\n");
@@ -62,12 +61,17 @@ class PluginLogs extends Plugin
 	{
 		$server = Server::getName();
 		
-		if($this->banlistCheck($server, $cmd['channel']))
+		if($cmd['channel'])
+			$channel = $cmd['channel'];
+		else
+			$channel = $cmd['message'];
+		
+		if($this->banlistCheck($server, $channel))
 		{
-			fputs($this->logfiles[$server.'.'.$cmd['channel']], '<-- '.$cmd['nick'].' ('.$cmd['user'].') left the channel.'."\n");
+			fputs($this->logfiles[$server.'.'.$channel], '<-- '.$cmd['nick'].' ('.$cmd['user'].') left the channel.'."\n");
 		
 			if($cmd['nick'] == $this->_main->config->getConfig('Servers.'.$server.'.Nick'))
-				fclose($this->logfiles[$server.'.'.$cmd['channel']]);
+				fclose($this->logfiles[$server.'.'.$channel]);
 		}
 	}
 	
