@@ -65,7 +65,7 @@ class PluginLogs extends Plugin
 	{
 		$server = Server::getName();
 		
-		if($this->banlistCheck($server, $cmd['channel'])
+		if($this->banlistCheck($server, $cmd['channel']))
 		{
 			fputs($this->logfiles[$sever.'.'$cmd['channel']], '<-- '.$cmd['nick'].' ('.$cmd['user'].') was kicked from the channel.');
 		
