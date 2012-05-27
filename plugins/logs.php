@@ -93,7 +93,7 @@ class PluginLogs extends Plugin
 		$server = Server::getName();
 		
 		if($this->banlistCheck($server, $cmd['channel']))
-			fputs($this->logfiles[$server.'.'.$cmd['channel']], '<-- '.$cmd['nick'].' set mode ['.join(' ', $cmd['additionnal']).'].'."\n");
+			fputs($this->logfiles[$server.'.'.$cmd['channel']], $cmd['nick'].' set mode ['.join(' ', $cmd['additionnal']).'].'."\n");
 	}
 	
 	public function ServerPrivmsg($cmd)
