@@ -33,7 +33,7 @@ class PluginLogs extends Plugin
 	public function ServerJoin($cmd)
 	{
 		$server = Server::getName();
-		if($this->banlistCheck($server, $cmd['channel'])
+		if($this->banlistCheck($server, $cmd['channel']))
 		{
 			if($cmd['nick'] == $this->_main->config->getConfig('Servers.'.$server.'.Nick'))
 			{
