@@ -25,3 +25,5 @@ Shorten=false
 [Plugin.Members]
 File=conf/members.ini
 
+[Plugin.Logs]
+BaseDir=logs
