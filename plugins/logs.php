@@ -85,7 +85,7 @@ class PluginLogs extends Plugin
 	public function ServerPrivmsg($cmd)
 	{
 		if($this->banlistCheck($server, $cmd['channel'])
-			fputs($this->logfiles[$sever.'.'.$cmd['channel']], '<>'.$cmd['nick'].' set mode ['.join(' ', $cmd['additionnal']).'].');
+			fputs($this->logfiles[$sever.'.'.$cmd['channel']], '<'.$cmd['nick'].'> '.$cmd['message']);
 	}
 	
 	private function banlistCheck($server, $channel)
