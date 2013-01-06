@@ -1,6 +1,7 @@
 <?php
 
 define('E_DEBUG', 32768);
+//Change this if you do not live in France
 date_default_timezone_set('Europe/Paris');
 
 include('core/api.class.php');
