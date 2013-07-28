@@ -69,6 +69,7 @@ class ServerInstance
 					{
 						case '!': //Command
 							$cmdName = substr(array_shift($message), 1);
+							$cmdName = strtolower($cmdName);
 							Ponybot::message('Command catched: !$0', array($cmdName), E_DEBUG);
 							$this->_main->plugins->callEvent('command', $cmdName, $command, $message);
 							break;
