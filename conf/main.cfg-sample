@@ -27,3 +27,6 @@ File=conf/members.ini
 
 [Plugin.Logs]
 BaseDir=logs
+
+[Plugin.Stats]
+StatsFile=conf/stats.csv

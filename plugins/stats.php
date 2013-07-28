@@ -2,16 +2,18 @@
 
 class PluginStats extends Plugin
 {
-
+	private $file;
+	
 	public function init()
 	{
+		$this->file = $this->config["StatsFile"];
 	}
 
 	public function CommandStats($cmd, $data)
 	{
 		if (!$data[0])
 			IRC::message($cmd['channel'], 'I need a name! (usage: !stats [name])');
-    	else if (($handle = fopen('./plugins/backup.csv', "r")) !== false)
+    	else if (($handle = fopen($this->file, "r")) !== false)
 		{
     		while (($fdata = fgetcsv($handle, 1000, ",")) !== false)
     		{
@@ -34,11 +36,11 @@ class PluginStats extends Plugin
 					else
 						IRC::message($cmd['channel'], 'I know this name! let\'s see... '.$data[0].' is a '.$orientation.' '.$sex.'; '.$he_she.' is '.$situation.' ');
 
-					//MLP-related stats, if the user said them
+					//MLP-related stats, if the user has them
 					if ($fdata[9] && $fdata[10] && $fdata[11])
 					{
 						IRC::message($cmd['channel'], 'Now, the pony stats: '.$data[0].' likes '.$fdata[9].' and prefer S'.$fdata[10].'E'.$fdata[11].' ');
-	    				if ($fdata[9] == 'Vinyl Scratch' || $fdata[9] == 'Dj PON-3')
+	    				if (str_replace(' ', '', $fdata[9]) == Server::getName())
 							IRC::message($cmd['channel'], 'Oh, '.$he_she.' loves me! thanks '.$data[0].' <3');
 					}
 					fclose($handle);
