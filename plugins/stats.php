@@ -17,7 +17,7 @@ class PluginStats extends Plugin
 		{
     		while (($fdata = fgetcsv($handle, 1000, ",")) !== false)
     		{
-    			if ($fdata[0] == $data[0])
+    			if (trim($fdata[0]) == $data[0])
     			{
     				//English sexual orientation
     				if ($fdata[2] || $fdata[3] || $fdata[4])
@@ -36,12 +36,19 @@ class PluginStats extends Plugin
 					else
 						IRC::message($cmd['channel'], 'I know this name! let\'s see... '.$data[0].' is a '.$orientation.' '.$sex.'; '.$he_she.' is '.$situation.' ');
 
-					//MLP-related stats, if the user has them
+					//MLP-related stats, if the user has them (pony and episode or only pony)
 					if ($fdata[9] && $fdata[10] && $fdata[11])
 					{
 						IRC::message($cmd['channel'], 'Now, the pony stats: '.$data[0].' likes '.$fdata[9].' and prefer S'.$fdata[10].'E'.$fdata[11].' ');
 	    				if (str_replace(' ', '', $fdata[9]) == Server::getNick())
 							IRC::message($cmd['channel'], 'Oh, '.$he_she.' loves me! thanks '.$data[0].' <3');
+					}
+					else if ($fdata[9])
+					{
+						IRC::message($cmd['channel'], 'Now, the pony stats: '.$data[0].' likes '.$fdata[9].'. ');
+	    				if (str_replace(' ', '', $fdata[9]) == Server::getNick())
+							IRC::message($cmd['channel'], 'Oh, '.$he_she.' loves me! thanks '.$data[0].' <3');
+
 					}
 					fclose($handle);
     				return true;
