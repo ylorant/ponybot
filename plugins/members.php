@@ -70,7 +70,7 @@ class PluginMembers extends Plugin
 		if(!isset($msg[1]))
 			return IRC::message($cmd['channel'], "Not enough parameters.");
 		
-		$user = $this->getMember($cmd['user']);
+		$user = $this->getMember($cmd['nick']);
 		if(!$user || $user['group'] != 'operators')
 			return IRC::message($cmd['channel'], "Insufficient privileges.");
 		
@@ -85,7 +85,7 @@ class PluginMembers extends Plugin
 		if(empty($msg))
 			return IRC::message($cmd['channel'], "Not enough parameters.");
 		
-		$user = $this->getMember($cmd['user']);
+		$user = $this->getMember($cmd['nick']);
 		if(!$user || $user['group'] != 'operators')
 			return IRC::message($cmd['channel'], "Insufficient privileges.");
 		
@@ -100,7 +100,7 @@ class PluginMembers extends Plugin
 		if(!isset($msg[1]))
 			return IRC::message($cmd['channel'], "Not enough parameters.");
 		
-		$user = $this->getMember($cmd['user']);
+		$user = $this->getMember($cmd['nick']);
 		
 		if(!$user || $user['group'] != 'operators')
 			return IRC::message($cmd['channel'], "Insufficient privileges.");
