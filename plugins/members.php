@@ -21,20 +21,28 @@ class PluginMembers extends Plugin
 		if($msg['message'] && !$msg['channel'])
 			$msg['channel'] = $msg['message'];
 		
-		if(in_array($msg['user'], $this->getMembersUsers()))
+		if($msg['nick'] == Server::getNick())
+			return;
+		
+		if(in_array($msg['nick'], $this->getMembersNicks()))
 		{
-			$user = $this->getMember($msg['user']);
+			$whois = IRC::whois($msg['nick']);
+			
+			if(empty($whois["auth"]))
+				return;
+			
+			$user = $this->getMember($msg['nick']);
 			IRC::userMode($msg['nick'], '+'.$this->members['Groups'][$user['group']], $msg['channel']);
 		}
 	}
 	
 	public function CommandLeave($cmd, $args)
 	{
-		if(in_array($cmd['user'], $this->getMembersUsers()))
+		if(in_array($cmd['nick'], $this->getMembersNicks()))
 		{
-			$user = $this->getMember($cmd['user']);
+			$user = $this->getMember($cmd['nick']);
 			IRC::userMode($cmd['nick'], '-'.$this->members['Groups'][$user['group']]);
-			$this->deleteMember($cmd['user']);
+			$this->deleteMember($cmd['nick']);
 			IRC::message($cmd['channel'], 'It\'s sad, but... Goodbye, my friend.');
 		}
 		else
@@ -43,12 +51,17 @@ class PluginMembers extends Plugin
 	
 	public function CommandJoin($cmd, $args)
 	{
-		if(!$this->addMember($cmd['nick'], $cmd['user'], 'members'))
+		if($this->memberExists($cmd['nick']))
 			IRC::message($cmd['channel'], 'Derp, According to my database, you are already a member...');
 		else
 		{
-			IRC::message($cmd['channel'], 'Welcome, '.$cmd['nick']);
-			IRC::giveVoice($cmd['nick']);
+			if($this->addMember($cmd["nick"], 'members'))
+			{
+				IRC::message($cmd['channel'], 'Welcome, '.$cmd['nick']);
+				IRC::giveVoice($cmd['nick']);
+			}
+			else
+				IRC::message($cmd["channel"], 'Derp, you are not registered on the IRC server...');
 		}
 	}
 	
@@ -97,15 +110,15 @@ class PluginMembers extends Plugin
 		if(!$info)
 			return IRC::message($cmd['channel'], "No such nick.");
 		
-		$user = $this->getMember($info['user'].'@'.$info['host']);
-		$name = $this->getMemberName($info['user'].'@'.$info['host']);
+		$user = $this->getMember($info['user'].'@'.$info['nick']);
+		$name = $this->getMemberName($info['user'].'@'.$info['nick']);
 		
 		if(!$user)
 			IRC::message($cmd['channel'], "Non-existent member.");
 		else
 		{
 			$oldgroup = $this->members['Members'][Server::getName()][$name]['group'];
-			if($this->setGroup($this->members['Members'][Server::getName()][$name]['host'], $msg[1]))
+			if($this->setGroup($this->members['Members'][Server::getName()][$name]['nick'], $msg[1]))
 			{
 				IRC::userMode($msg[0], '-'.$this->members['Groups'][$oldgroup]);
 				IRC::userMode($msg[0], '+'.$this->members['Groups'][$msg[1]]);
@@ -114,12 +127,18 @@ class PluginMembers extends Plugin
 		}
 	}
 	
-	public function addMember($nick, $host, $group)
+	public function addMember($nick, $group)
 	{
+		//Checking if user is registered on the server
+		$whois = IRC::whois($nick);
+		
+		if($whois == FALSE || empty($whois["auth"]))
+			return FALSE;
+		
 		$nick = preg_replace("/[^a-zA-Z0-9]/", '', $nick);
-		if(!in_array($host, $this->getMembersUsers()))
+		if(!in_array($nick, $this->getMembersNicks()))
 		{
-			$this->members['Members'][Server::getName()][$nick] = array('host' => $host, 'group' => $group);
+			$this->members['Members'][Server::getName()][$nick] = array('nick' => $nick, 'group' => $group);
 			$this->saveMembersFile($this->config['File']);
 			return TRUE;
 		}
@@ -157,14 +176,14 @@ class PluginMembers extends Plugin
 			return FALSE;
 	}
 	
-	public function setGroup($host, $group)
+	public function setGroup($nick, $group)
 	{
 		if(!isset($this->members['Groups'][$group]))
 			return FALSE;
 		
 		foreach($this->members['Members'][Server::getName()] as &$m)
 		{
-			if($m['host'] == $host)
+			if($m['nick'] == $nick)
 			{
 				$m['group'] = $group;
 				$this->saveMembersFile($this->config['File']);
@@ -175,11 +194,11 @@ class PluginMembers extends Plugin
 		return FALSE;
 	}
 	
-	public function deleteMember($host)
+	public function deleteMember($nick)
 	{
 		foreach($this->members['Members'][Server::getName()] as $k => $m)
 		{
-			if($m['host'] == $host)
+			if($m['nick'] == $nick)
 			{
 				unset($this->members['Members'][Server::getName()][$k]);
 				$this->saveMembersFile($this->config['File']);
@@ -190,22 +209,36 @@ class PluginMembers extends Plugin
 		return FALSE;
 	}
 	
-	public function getMember($host)
+	public function memberExists($nick)
+	{
+		if(empty($this->members['Members'][Server::getName()]))
+			return false;
+		
+		foreach($this->members['Members'][Server::getName()] as $m)
+		{
+			if($m['nick'] == $nick)
+				return true;
+		}
+		
+		return false;
+	}
+	
+	public function getMember($nick)
 	{
 		foreach($this->members['Members'][Server::getName()] as $m)
 		{
-			if($m['host'] == $host)
+			if($m['nick'] == $nick)
 				return $m;
 		}
 		
 		return FALSE;
 	}
 	
-	public function getMemberName($host)
+	public function getMemberName($nick)
 	{
 		foreach($this->members['Members'][Server::getName()] as $k => $m)
 		{
-			if($m['host'] == $host)
+			if($m['nick'] == $nick)
 				return $k;
 		}
 		
@@ -221,7 +254,7 @@ class PluginMembers extends Plugin
 		return $users;
 	}
 	
-	public function getMembersUsers($group = NULL)
+	public function getMembersNicks($group = NULL)
 	{
 		$users = array();
 		
@@ -231,7 +264,7 @@ class PluginMembers extends Plugin
 		foreach($this->members['Members'][Server::getName()] as $u)
 		{
 			if($group == NULL || $u['group'] == $group)
-				$users[] = $u['host'];
+				$users[] = $u['nick'];
 		}
 		
 		return $users;

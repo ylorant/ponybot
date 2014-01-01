@@ -33,6 +33,8 @@ class IRCConnection
 	public function read()
 	{
 		$data = socket_read($this->_socket, 1024);
+		
+		echo $data;
 		if(substr($data, -2) == "\r\n")
 		{
 			$commands = explode("\r\n", $this->_data.$data);
@@ -100,6 +102,12 @@ class IRCConnection
 		$this->send("PRIVMSG $channel :ACTION $message");
 	}
 	
+	public function ping($hostname = NULL)
+	{
+		$hostname = $hostname ? $hostname : gethostname();
+		$this->send("PING :". $hostname);
+	}
+	
 	public function getChannels()
 	{
 		return array_keys($this->_channels);
@@ -145,7 +153,6 @@ class IRCConnection
 			foreach($data as $msg)
 			{
 				$cmd = $this->parseMsg($msg);
-				var_dump($cmd);
 				switch($cmd['command'])
 				{
 					case 401:
@@ -212,8 +219,6 @@ class IRCConnection
 		{
 			foreach($this->_channels as $chan)
 			{
-				var_dump($this->getChannelUsers($chan));
-				echo $user."\n";
 				if(in_array($user, $this->getChannelUsers($chan)))
 					$this->send('MODE '.$chan.' '.$mode.' '.$user);
 			}

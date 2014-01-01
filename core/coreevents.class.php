@@ -20,6 +20,20 @@ class CoreEvents
 		$events->addEvent('server', 'coreevents', 'mode', array($this, 'ServerMode'));
 		$events->addEvent('server', 'coreevents', 'join', array($this, 'ServerJoin'));
 		$events->addEvent('server', 'coreevents', 'part', array($this, 'ServerPart'));
+		
+		$events->addRoutine($this, 'RoutinePingServer', 60);
+	}
+	
+	public function RoutinePingServer()
+	{
+		foreach(ServerList::get() as $server)
+		{
+			$srv = ServerList::getServer($server);
+			IRC::setServer($srv);
+			Server::setServer($srv);
+			
+			IRC::ping();	
+		}
 	}
 	
 	public function ServerConnected($command)

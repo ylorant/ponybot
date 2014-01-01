@@ -13,7 +13,7 @@ class Plugins extends Events
 	/** Constructor for PluginManager
 	 * Initializes the class.
 	 * 
-	 * \param $main A reference to the main program class (Leelabot class).
+	 * \param $main A reference to the main program class (Ponybot class).
 	 */
 	public function __construct(&$main)
 	{

@@ -19,8 +19,8 @@ class ServerInstance
 		
 		$this->_IRC->connect($config['Address'], $config['Port']);
 		$this->_IRC->setNick($config['Nick'], $config['User']);
-		/*if(!isset($config['Ping']) || Ponybot::parseBool($config['Ping']))
-			$this->_IRC->waitPing();*/
+		//~ if(!isset($config['Ping']) || Ponybot::parseBool($config['Ping']))
+			//~ $this->_IRC->waitPing();
 		usleep(5000);
 		
 		if(isset($config['FloodLimit']) && Ponybot::parseRBool($config['FloodLimit']))
