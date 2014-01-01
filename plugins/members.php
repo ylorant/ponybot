@@ -110,8 +110,8 @@ class PluginMembers extends Plugin
 		if(!$info)
 			return IRC::message($cmd['channel'], "No such nick.");
 		
-		$user = $this->getMember($info['user'].'@'.$info['nick']);
-		$name = $this->getMemberName($info['user'].'@'.$info['nick']);
+		$user = $this->getMember($info['nick']);
+		$name = $this->getMemberName($info['nick']);
 		
 		if(!$user)
 			IRC::message($cmd['channel'], "Non-existent member.");
