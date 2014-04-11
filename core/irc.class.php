@@ -165,7 +165,8 @@ class IRCConnection
 						$info['host'] = $cmd['additionnal'][2];
 						break;
 					case 307:
-						if($cmd['message'] == 'is a registered nick')
+						// if($cmd['message'] == 'is a registered nick'
+						// 	|| $cmd['message'] == 'is identified for this nick')
 							$info['auth'] = $info['nick'];
 						break;
 					case 319:

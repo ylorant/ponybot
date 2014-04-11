@@ -3,6 +3,7 @@
 class PluginMembers extends Plugin
 {
 	private $members;
+	private $membersCache = array();
 	
 	public function init()
 	{
@@ -33,7 +34,28 @@ class PluginMembers extends Plugin
 			
 			$user = $this->getMember($msg['nick']);
 			IRC::userMode($msg['nick'], '+'.$this->members['Groups'][$user['group']], $msg['channel']);
+			$this->membersCache[$msg['nick']] = $user;
 		}
+	}
+	
+	public function ServerQuit($msg)
+	{
+		if(!empty($this->membersCache[$msg['nick']]))
+			unset($this->membersCache[$msg['nick']]);
+	}
+	
+	public function ServerPart($msg)
+	{
+		if(!empty($this->membersCache[$msg['nick']]))
+			unset($this->membersCache[$msg['nick']]);
+	}
+	
+	public function getNickGroup($nick)
+	{
+		if(!empty($this->membersCache[$nick]))
+			return $this->membersCache[$nick]['group'];
+		else
+			return null;
 	}
 	
 	public function CommandLeave($cmd, $args)

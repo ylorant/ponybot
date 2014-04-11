@@ -21,7 +21,8 @@ class PluginIRCBase extends Plugin
 		if(!$members)
 			return;
 		
-		if(!in_array($param['user'], $members->getMembersUsers('operators')))
+		$group = $members->getNickGroup($param['nick']);
+		if(empty($group) || $group != "operators")
 			return;
 			
 		if(in_array($args[0], IRC::getChannels())) 
