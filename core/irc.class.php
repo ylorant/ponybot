@@ -77,6 +77,11 @@ class IRCConnection
 		$this->send('USER '.$user.' '.$user.' '.$user.' '.$user);
 	}
 	
+	public function setPassword($password)
+	{
+		$this->send('PASS '. $password);
+	}
+	
 	public function message($to, $message)
 	{
 		$this->send('PRIVMSG '.$to.' :'.$message);

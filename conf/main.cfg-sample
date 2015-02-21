@@ -30,3 +30,6 @@ BaseDir=logs
 
 [Plugin.Stats]
 StatsFile=conf/stats.csv
+
+[Plugin.Customcommands]
+File=conf/commands.ini

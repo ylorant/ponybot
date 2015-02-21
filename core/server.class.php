@@ -18,6 +18,10 @@ class ServerInstance
 		$this->_name = $this->_main->getServerName($this);
 		
 		$this->_IRC->connect($config['Address'], $config['Port']);
+		
+		if(!empty($config['Password']))
+			$this->_IRC->setPassword($config['Password']);
+		
 		$this->_IRC->setNick($config['Nick'], $config['User']);
 		//~ if(!isset($config['Ping']) || Ponybot::parseBool($config['Ping']))
 			//~ $this->_IRC->waitPing();
