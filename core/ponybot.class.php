@@ -176,7 +176,7 @@ class Ponybot
 				$edit = $content;
 			}
 			else
-				Ponybot::message('Orphan config parameter : $0', array($section), E_WARNING);
+				$config[$section] = $content;
 		}
 		
 		return $config;
