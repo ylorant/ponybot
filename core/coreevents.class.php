@@ -64,7 +64,7 @@ class CoreEvents
 	
 	public function ServerJoin($command)
 	{
-		if($command['nick'] != $this->_main->config->getConfig('Servers.'.Server::getName().'.Nick'))
+		if(strtolower($command['nick']) != strtolower($this->_main->config->getConfig('Servers.'.Server::getName().'.Nick')))
 		{
 			if($command['message'] && !$command['channel'])
 				$command['channel'] = $command['message'];

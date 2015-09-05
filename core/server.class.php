@@ -46,9 +46,10 @@ class ServerInstance
 		return $this->_IRC;
 	}
 	
-	public function step()
+	public function step($data = null)
 	{
-		$data = $this->_IRC->read();
+		if($data == null)
+			$data = $this->_IRC->read();
 		
 		foreach($data as $command)
 		{

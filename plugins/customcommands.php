@@ -54,7 +54,6 @@ class PluginCustomCommands extends Plugin
 		$newcommand = array_shift($args);
 		$newcommand = $newcommand[0] == '!' ? substr($newcommand, 1) : $newcommand;
 		
-		var_dump($newcommand);
 		if(empty($this->commands['Commands'][$newcommand]))
 			return IRC::message($param['channel'], "This command does not exist. Try again.");
 		

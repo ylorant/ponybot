@@ -192,9 +192,7 @@ class Events
 		
 		//Calling back
 		foreach($this->_events[$listener][$event] as $id => $callback)
-		{
 			call_user_func_array($callback, $params);
-		}
 		
 		return TRUE;
 	}

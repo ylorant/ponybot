@@ -34,7 +34,6 @@ class IRCConnection
 	{
 		$data = socket_read($this->_socket, 1024);
 		
-		echo $data;
 		if(substr($data, -2) == "\r\n")
 		{
 			$commands = explode("\r\n", $this->_data.$data);
@@ -132,12 +131,15 @@ class IRCConnection
 					$this->processBuffer();
  				} while(!$data);
 
+				Server::step($data);
+					
 				foreach($data as $msg)
 				{
-					$cmd = $this->parseMsg($msg);
-					Ponybot::$instance->plugins->callEvent('server', strtolower($cmd['command']), $cmd);
+					if($command['command'] == 366 || $command['command'] == 421)
+						break;
 				}
-			} while($cmd['command'] != 366);
+				
+			} while(1);
 		}
 		
 		return array_keys($this->_users[$channel]);
@@ -153,6 +155,8 @@ class IRCConnection
 				$data = $this->read();
 				$this->processBuffer();
 			} while(!$data);
+			
+			Server::step($data);
 			
 			$info = array();
 			foreach($data as $msg)
@@ -185,10 +189,11 @@ class IRCConnection
 							unset($info['channels'][$k]);
 						}
 						break;
+					case 318:
+						break 2;
 				}
 			}
-			
-		} while($cmd['command'] != 318);
+		} while(1);
 		
 		return $info;
 	}
